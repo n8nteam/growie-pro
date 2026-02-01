@@ -1,0 +1,78 @@
+---
+title: "Emergency Growbox Shutdown System"
+description: "Automatic and emergency box shutdown systems: safety and stealth."
+level: "advanced"
+order: 18
+readTime: 7
+date: "2025-02-01"
+---
+
+# Emergency Growbox Shutdown System
+
+![Emergency growbox shutdown](/images/guides/stealth-shutdown.jpg)
+
+Quick and silent growbox shutdown may be needed in various situations. A well-designed system allows you to cut power in seconds and restore operation without harming plants.
+
+## Why You Need It
+
+- **Stealth** — eliminating noise and light when others are present
+- **Safety** — emergency power cut during leaks or overheating
+- **Remote control** — managing the box when away
+- **Automation** — responding to sensor readings automatically
+
+## Implementation Options
+
+### GSM Relay
+Control via SMS or phone call. Works without Wi-Fi. 1–4 channels, $25–60.
+
+### Wi-Fi Smart Plugs
+Control through smartphone app. Tuya, Sonoff S26, TP-Link Kasa. $7–20 each.
+
+### Arduino / ESP32
+DIY controller with relay module. Web interface, Telegram bot, MQTT. Up to 8+ channels, $15–35.
+
+## Wiring
+
+Connect each system through a separate relay:
+
+- **Channel 1** — Lighting (LED driver)
+- **Channel 2** — Exhaust ventilation
+- **Channel 3** — Circulation fan
+- **Channel 4** — Watering pump
+
+Master power through a **main breaker** for emergency all-off.
+
+## Correct Shutdown Sequence
+
+### Emergency
+1. **Lighting** — off first
+2. **Watering / pump** — off second
+3. **Ventilation** — off last (run 30–60 sec to clear odor)
+
+### Planned
+1. **Watering** — stop 15 min before
+2. **Lighting** — off
+3. **Ventilation** — leave 5–10 min for airing, then off
+
+## Recovery
+
+1. **Ventilation** — on first (5 min before light)
+2. **Lighting** — on at reduced power, ramp over an hour
+3. **Watering** — resume on schedule
+
+## Impact on Plants
+
+| Duration | Consequences | Action |
+|----------|-------------|--------|
+| Up to 2 hours | Minimal | None needed |
+| 2–6 hours | Mild stress | Continue as normal |
+| 6–12 hours | Noticeable stress | Add stress reliever |
+| 12–24 hours | Serious stress | Gradual recovery |
+| Over 24 hours | Risk of harvest loss | Check roots and leaves |
+
+## Tips
+
+- Keep the "panic button" easily accessible
+- Test the shutdown system in advance
+- Set up phone notifications
+- Install UPS for proper controller shutdown

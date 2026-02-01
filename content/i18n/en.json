@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Growie — Smart Plant Growing Assistant",
+    "description": "Growie helps you control the climate, keep a plant diary, and get personalized recommendations for the perfect harvest."
+  },
+  "nav": {
+    "home": "Home",
+    "guides": "Guides",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "Grow like a pro",
+    "subtitle": "Growie is your smart plant growing assistant. Control the climate, keep a diary, and get data-driven recommendations.",
+    "cta": "Download for free",
+    "learnMore": "Learn more"
+  },
+  "features": {
+    "title": "Everything for a successful grow",
+    "subtitle": "Growie combines all the tools a grower needs in one app",
+    "climate": {
+      "title": "Climate Control",
+      "description": "Track temperature, humidity, and VPD in real time. Get alerts when parameters deviate."
+    },
+    "diary": {
+      "title": "Plant Diary",
+      "description": "Log every growth stage with photos and notes. Compare cycles and find the best strategies."
+    },
+    "schedule": {
+      "title": "Watering Schedule",
+      "description": "Set up watering and feeding schedules. Growie will remind you when it's time to act."
+    },
+    "analytics": {
+      "title": "Analytics & Stats",
+      "description": "Growth charts, resource usage, yield forecasts — all data in convenient dashboards."
+    },
+    "problems": {
+      "title": "Problem Diagnosis",
+      "description": "Snap a photo of a leaf — Growie will identify the issue and suggest a solution using AI."
+    },
+    "community": {
+      "title": "Grower Community",
+      "description": "Share experience, ask questions, and learn from experienced growers in the Growie community."
+    }
+  },
+  "download": {
+    "title": "Start growing smarter",
+    "subtitle": "Download Growie for free and take your grow to the next level",
+    "cta": "Download for iOS",
+    "ctaAndroid": "Download for Android",
+    "comingSoon": "Coming Soon"
+  },
+  "guides": {
+    "title": "Growing Guides",
+    "subtitle": "Step-by-step guides from beginner to expert",
+    "filterAll": "All",
+    "filterBeginner": "Beginner",
+    "filterAdvanced": "Advanced",
+    "readMore": "Read more",
+    "backToGuides": "← All guides",
+    "backToCategory": "← Back to category",
+    "minuteRead": "min read",
+    "comingSoon": "Coming soon",
+    "noGuidesYet": "Articles in this category are coming soon",
+    "guidesCount": "guides"
+  },
+  "footer": {
+    "description": "Smart plant growing assistant",
+    "product": "Product",
+    "resources": "Resources",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  }
+}

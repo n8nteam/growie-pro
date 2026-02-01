@@ -1,0 +1,73 @@
+---
+title: "Hygrostat for Humidity Control"
+description: "How to choose and set up a hygrostat for maintaining optimal humidity in your growbox."
+level: "beginner"
+order: 20
+readTime: 6
+date: "2025-02-01"
+---
+
+# Hygrostat for Humidity Control
+
+![Growbox hygrostat](/images/guides/hygrostat.jpg)
+
+A hygrostat automatically maintains a set humidity level by controlling a humidifier or dehumidifier. Important for humidity-sensitive growth stages.
+
+## Why You Need One
+
+- **Too high humidity** — risk of mold, powdery mildew, root rot
+- **Too low humidity** — slowed growth, leaf curling, tip burns
+- **Sudden changes** — stress, reduced immunity
+
+## Types
+
+### Mechanical
+Based on hygroscopic material. Low accuracy (±5–7%), rarely used.
+
+### Electronic (Digital)
+Capacitive or resistive sensors. Accuracy ±2–3%, digital display, hysteresis adjustment. Optimal choice.
+
+## Popular Models
+
+| Model | Range | Accuracy | Relay | Price |
+|-------|-------|----------|-------|-------|
+| Inkbird IHC-200 | 1–99% RH | ±3% | 10A (1 ch) | $15–25 |
+| W3005 | 1–99% RH | ±3% | 10A (2 ch) | $7–12 |
+| Sonoff TH16 + sensor | 0–99.9% RH | ±2% | 16A | $15–25 |
+| Inkbird IHC-230 | 1–99% RH | ±3% | 15A (2 ch) | $30–40 |
+
+## Connecting to Humidifier
+
+1. Plug hygrostat into mains
+2. Plug humidifier into hygrostat outlet
+3. Place sensor inside box — centered, at plant level, away from fan airflow
+4. Set mode to **humidify** (activates when humidity drops below setpoint)
+
+## Optimal Humidity by Stage
+
+| Stage | Optimal RH | Hygrostat Setpoint |
+|-------|-----------|-------------------|
+| Germination / clones | 70–80% | 75% (humidify) |
+| Seedling | 65–70% | 65% (humidify) |
+| Vegetation | 50–60% | 55% (humidify) |
+| Early flowering | 45–55% | 50% (dehumidify >55%) |
+| Late flowering | 40–50% | 45% (dehumidify) |
+| Drying | 45–55% | 50% (dehumidify >55%) |
+
+**Important:** during late flowering, keep humidity below 55–60% to prevent flower mold.
+
+## VPD — Advanced Approach
+
+VPD (Vapor Pressure Deficit) accounts for both temperature and humidity:
+
+- Seedlings / clones: 0.4–0.8 kPa
+- Vegetation: 0.8–1.2 kPa
+- Flowering: 1.0–1.5 kPa
+
+## Practical Tips
+
+- Mount sensor at canopy height, in shade, away from walls
+- Calibrate every 3–6 months with saturated salt solution test (should read 75% after 12 hours)
+- Use ultrasonic cool-mist humidifiers
+- Ensure condensation drainage
+- Combine with thermostat for full climate automation

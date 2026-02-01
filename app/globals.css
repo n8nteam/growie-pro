@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .prose h1 {
+    @apply text-3xl font-bold text-white mb-6 mt-8;
+  }
+  .prose h2 {
+    @apply text-2xl font-semibold text-white mb-4 mt-6;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-200 mb-3 mt-5;
+  }
+  .prose p {
+    @apply text-gray-300 leading-relaxed mb-4;
+  }
+  .prose ul {
+    @apply list-disc list-inside mb-4 text-gray-300 space-y-1;
+  }
+  .prose ol {
+    @apply list-decimal list-inside mb-4 text-gray-300 space-y-1;
+  }
+  .prose strong {
+    @apply text-white font-semibold;
+  }
+  .prose a {
+    @apply text-primary-400 hover:text-primary-300 underline;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-primary-500 pl-4 italic text-gray-400 my-4;
+  }
+  .prose code {
+    @apply bg-gray-800 text-primary-300 px-1.5 py-0.5 rounded text-sm;
+  }
+  .prose pre {
+    @apply bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+  .prose img {
+    @apply w-full rounded-2xl my-8 border border-gray-800;
+  }
+  .prose table {
+    @apply w-full border-collapse mb-6 text-sm;
+  }
+  .prose thead {
+    @apply border-b-2 border-primary-600;
+  }
+  .prose th {
+    @apply text-left text-primary-300 font-semibold px-4 py-3 bg-gray-800/50;
+  }
+  .prose th:first-child {
+    @apply rounded-tl-lg;
+  }
+  .prose th:last-child {
+    @apply rounded-tr-lg;
+  }
+  .prose td {
+    @apply text-gray-300 px-4 py-3 border-b border-gray-800;
+  }
+  .prose tbody tr {
+    @apply hover:bg-gray-800/30 transition-colors;
+  }
+  .prose tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .prose tbody tr:last-child td:first-child {
+    @apply rounded-bl-lg;
+  }
+  .prose tbody tr:last-child td:last-child {
+    @apply rounded-br-lg;
+  }
+}
