@@ -1,0 +1,156 @@
+---
+title: "How to Mod CFLs"
+description: "Advanced guide to modifying compact fluorescent lamps: removing the housing, external electronic ballast, increasing power, combining tubes, and safety precautions"
+level: advanced
+order: 16
+readTime: 8
+date: "2025-02-01"
+---
+
+# How to Mod CFLs
+
+Modifying compact fluorescent lamps (CFLs) is a practice that originated in an era when LEDs weren't yet affordable and HPS wouldn't fit in a micro grow box. Growers learned to disassemble CFLs, relocate the electronics, combine tubes, and build custom lighting systems. This is an advanced topic that requires basic electronics knowledge and strict adherence to safety precautions.
+
+## Why Modify CFLs
+
+A standard CFL has several design limitations:
+
+- The plastic housing between the base and tube takes up vertical space and prevents moving the tube closer to the plant
+- The built-in electronic ballast heats up and warms the base, shortening the lamp's lifespan
+- The standard tube configuration isn't always optimal for a specific space
+- When the tube burns out, the ballast is discarded along with it, even though it's still functional
+- Non-standard tube combinations can't be connected
+
+Modification solves all of these problems. By separating the CFL into the tube and ballast, you get a flexible system where the electronics are relocated outside the hot zone and the tubes can be arranged however you like.
+
+## Removing the Housing: Step-by-Step
+
+### Required Tools
+
+- Flat screwdriver (thin)
+- Hacksaw or Dremel with cutting disc
+- Soldering iron 25–40 W
+- Solder
+- Heat-shrink tubing
+- Wire, 0.5–0.75 mm² cross-section
+- Multimeter
+- Gloves and safety glasses
+
+### Procedure
+
+The first step is to disconnect the lamp from the mains at least 30 minutes before starting work. This is critically important to allow the capacitors to discharge.
+
+Next, you need to separate the plastic housing. Most CFLs have a housing made of two halves joined by snap-fit clips. Insert a thin screwdriver into the seam between the halves and carefully pry it open. Work your way around the perimeter, releasing the clips one by one. If the clips are too tight, you can carefully saw through the seam with a hacksaw, taking care not to damage the internal components.
+
+After opening the housing, you'll see the electronic ballast board, to which four wires are soldered — two on each side of the tube (connecting to the electrodes). Carefully desolder the wires from the board, making note of or marking which wire went where. It's helpful to photograph the board before desoldering.
+
+Now you have a separate tube (with four leads) and a separate electronic ballast on a board with the base.
+
+## External Electronic Ballast
+
+The relocated ballast can be placed outside the grow box, which provides several benefits:
+
+- Heat from the electronics doesn't enter the growing space
+- The electronics operate at lower temperatures — longer lifespan
+- Frees up space in the grow box
+- Easier to service and replace components
+
+To relocate the ballast, extend the wires from the tube to the board. Use wire with a cross-section of at least 0.5 mm², up to 1–1.5 meters in length. Longer wires may cause startup problems due to high-frequency voltage drop.
+
+All connections must be solidly soldered and insulated with heat-shrink tubing. Twist joints are unacceptable — high-frequency currents require quality connections.
+
+House the ballast board in a suitable enclosure (a plastic junction box or a power supply housing). Ensure ventilation openings are present — the board generates heat.
+
+## Increasing Power
+
+Some growers increase the ballast power by replacing components. This is a risky procedure requiring electronics knowledge.
+
+### The Principle
+
+An electronic ballast is essentially an inverter that converts mains voltage at 50 Hz to a high frequency (20–60 kHz). The power is determined by several components:
+
+- Filter capacitor capacitance
+- Inductor parameters
+- Resistor values in the feedback circuit
+- Transistors (their maximum current and power ratings)
+
+The simplest way to slightly increase power is to replace the filter electrolytic capacitor with one of higher capacitance (at the same voltage rating). For example, replacing 10 uF/400V with 22 uF/400V can increase power by 10–20%.
+
+More significant power increases require replacing the transistors with higher-power ones and rewinding the inductor. This only makes sense if you have electronics experience and understand how half-bridge inverters work.
+
+Important warning: exceeding the ballast's rated power by more than 20–30% leads to component overheating, unstable operation, and fire risk. Don't try to squeeze 150 W out of an 85 W ballast — it's better to use two ballasts.
+
+## Combining Multiple Tubes
+
+An interesting modification option is connecting non-standard tubes to a ballast. The key rule: the total tube wattage must match the ballast wattage (10–15% deviation is acceptable).
+
+### Series Connection
+
+Two half-power tubes in series. For example, you can connect two 39 W T5 linear tubes in series to a ballast from an 85 W CFL. With a series connection, the same current flows through both tubes, and the voltages add up.
+
+Wiring diagram: one electrode of the first tube connects to the ballast output, the second electrode of the first tube connects to the first electrode of the second tube, and the second electrode of the second tube connects to the other ballast output.
+
+### Parallel Connection
+
+Theoretically possible, but problematic in practice — tubes may strike unevenly, and one may "hog" all the current. Parallel connection of gas-discharge lamps requires individual ballast elements (chokes) in each branch.
+
+### Connecting Linear Tubes to a CFL Ballast
+
+A CFL ballast can be used to power T5 or T8 linear tubes. This allows you to create a compact and efficient system from inexpensive components.
+
+Keep compatibility in mind:
+
+- A 55–85 W CFL ballast works with a T5 HO 54 W tube
+- A 23–30 W CFL ballast works with a T8 18 W or T5 24 W tube
+- A 105–125 W CFL ballast works with two T5 HO 54 W tubes in series
+
+## Safety Precautions
+
+CFL modification involves serious risks. Safety rules must be strictly followed.
+
+### Capacitor Danger
+
+This is the main hazard when working with electronic ballasts. The filter electrolytic capacitor is charged to 300–350 V (the peak value of mains voltage). Even after disconnecting from the mains, the capacitor can hold its charge for hours.
+
+Rules for handling capacitors:
+
+- Always discharge the capacitor before working. Use a 10–47 kohm resistor rated at 2 W — connect it across the capacitor terminals for 30–60 seconds.
+- Don't discharge the capacitor by shorting it with a screwdriver — this can damage the capacitor and cause a spark.
+- After discharging, verify the voltage with a multimeter — it should be below 10 V.
+- An electric shock from a charged 10 uF/400V capacitor is extremely painful and potentially dangerous to health (especially if the current path crosses the heart area).
+
+### Mercury Hazard
+
+A CFL tube contains mercury vapor. If broken:
+
+- Immediately leave the room and ventilate it for 15–30 minutes
+- Don't vacuum — this will spread the mercury
+- Collect fragments with a damp cloth or adhesive tape into a sealed bag
+- Dispose of as hazardous waste
+
+### Electrical Safety During Operation
+
+- All connections must be reliably insulated
+- Use heat-shrink tubing, not electrical tape (tape unravels over time)
+- The ballast must be in an enclosed housing
+- Wires from the ballast to the tube should not run near flammable materials
+- Always use a fuse or circuit breaker of the appropriate rating
+- Ground the ballast enclosure if it's metal
+
+## Practical Designs
+
+### Design 1: External Ballast for an 85 W CFL
+
+Components: 85 W E40 CFL, 2x0.75 mm² wire (1 m), junction box, Wago connectors.
+
+Disassemble the CFL, relocate the board to the junction box, extend wires to the tube. Mount the tube to an aluminum or plywood plate using clamps. Result — a flat fixture 5–6 cm thick instead of the standard 20+ cm.
+
+### Design 2: Array of 4 T5 Tubes on CFL Ballasts
+
+Two ballasts from 55 W CFLs power four T5 24 W tubes (two in series per ballast). Tubes are mounted on an aluminum profile, ballasts are relocated outside the box. The result is a compact and efficient fixture comparable to a commercial T5 panel but significantly cheaper.
+
+### Design 3: Hybrid Fixture
+
+Central 85 W CFL + 4 side-mounted 23 W CFLs with external ballasts. All tubes face the plants, all electronics are relocated outside. Total power: 177 W with minimal heat output in the growing zone.
+
+CFL modification is an art at the intersection of electronics and horticulture. With a competent approach, it allows you to create efficient and compact lighting systems for minimal cost. But always remember safety — 350 V on a capacitor doesn't forgive carelessness.

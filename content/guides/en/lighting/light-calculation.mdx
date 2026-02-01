@@ -1,0 +1,193 @@
+---
+title: "Lighting Calculations"
+description: "How to properly calculate the wattage and number of lamps for your grow box. Formulas, tables, and example calculations for different grow areas."
+level: intermediate
+order: 3
+readTime: 11
+date: "2025-02-01"
+---
+
+# Lighting Calculations
+
+Proper lighting calculation is one of the key steps in planning a grow box. Insufficient light leads to stretched plants and reduced yields, while too much light causes light stress and overheating. In this article, we will cover the main calculation methods and provide ready-made tables for the most common box sizes.
+
+## Methods of Lighting Calculation
+
+There are three main approaches to calculation:
+
+- **By wattage (W/m²)** — the simplest but least accurate method
+- **By illuminance (lm/m²)** — more accurate, accounting for the lamp's luminous efficacy
+- **By PPFD (umol/s/m²)** — the most accurate and scientific method
+
+Let's examine each one in detail.
+
+## Calculation by Wattage (W/m²)
+
+This is a simplified method based on the lamp's power consumption. It is used as a rough guide since it does not account for differences in lamp efficiency.
+
+### Formula
+
+**Required wattage = Area (m²) x Target (W/m²)**
+
+### Wattage Targets per Square Meter
+
+| Lamp Type | Minimum (W/m²) | Optimal (W/m²) | Maximum (W/m²) |
+|---|---|---|---|
+| HPS | 250 | 400–600 | 800 |
+| MH | 300 | 400–600 | 800 |
+| CFL | 200 | 300–400 | 500 |
+| LED (quality) | 150 | 200–350 | 500 |
+| LED (budget) | 250 | 350–500 | 600 |
+
+**Example:** For a 60x60 cm box (0.36 m²) with HPS: 0.36 x 400 = 144 W (minimum), 0.36 x 600 = 216 W (optimal). So a 250 W HPS would be a good choice.
+
+**Important:** For LED fixtures, always use the actual power draw from the wall, not the advertised "equivalent."
+
+## Calculation by Illuminance (Lumen/m²)
+
+This method accounts for the specific lamp's luminous efficacy and provides a more accurate assessment of the actual amount of light.
+
+### Formula
+
+**Illuminance (lx) = Luminous flux (lm) / Area (m²)**
+
+Or in reverse:
+
+**Required luminous flux (lm) = Target illuminance (lx) x Area (m²)**
+
+### Target Illuminance Values
+
+| Stage | Minimum (lx) | Optimal (lx) | Ideal (lx) |
+|---|---|---|---|
+| Seedlings / clones | 5,000 | 7,000–10,000 | 15,000 |
+| Vegetation | 15,000 | 25,000–35,000 | 45,000 |
+| Flowering | 25,000 | 40,000–55,000 | 75,000 |
+
+**Example:** For flowering in a 100x100 cm box (1 m²), the optimal target is 40,000 lx. This means you need a lamp with a luminous flux of at least 40,000 lm. A 400 W HPS produces approximately 48,000 lm — sufficient with margin, but accounting for reflector losses and distance, the actual illuminance will be lower.
+
+### Correction Factors
+
+In practice, some light is lost. You need to account for:
+
+- **Reflector efficiency** — from 0.7 (poor) to 0.95 (high quality)
+- **Glass/lens losses** — from 0.85 to 0.95
+- **Wall reflectivity coefficient** — white matte surface ~0.85, Mylar ~0.90–0.95
+- **Lamp degradation** — HPS loses 10–20% of brightness by mid-life
+
+The overall correction factor is typically 0.6–0.8. Multiply the required luminous flux by 1.2–1.5 for margin.
+
+## Calculation by PPFD (umol/s/m²)
+
+The most accurate method, used by professionals. PPFD measures the number of photons in the PAR range reaching the plant canopy surface.
+
+### Target PPFD Values
+
+| Stage | Minimum | Optimal | Maximum (with CO₂) |
+|---|---|---|---|
+| Seedlings / clones | 100–200 | 200–300 | 400 |
+| Vegetation | 300–400 | 400–600 | 800 |
+| Flowering | 400–600 | 600–900 | 1000–1500 |
+
+**Note:** PPFD values above 800 are only effective with supplemental CO₂ enrichment (up to 1200–1500 ppm). Without additional CO₂, photosynthesis saturates at approximately 800 PPFD.
+
+### Calculation Using Lamp Efficiency
+
+If the lamp's efficiency in umol/J is known (provided by quality LED manufacturers):
+
+**PPF (umol/s) = Power (W) x Efficiency (umol/J)**
+
+**Approximate PPFD = PPF / Area (m²) x Uniformity coefficient (0.5–0.7)**
+
+The uniformity coefficient accounts for the fact that light is distributed unevenly — more intense in the center, weaker at the edges.
+
+**Example:** A 240 W LED Quantum Board with 2.5 umol/J efficiency:
+- PPF = 240 x 2.5 = 600 umol/s
+- For a 100x100 cm box (1 m²): PPFD ≈ 600 x 0.6 = 360 umol/s/m² (average)
+- This is sufficient for vegetation but not quite enough for full flowering
+
+## Example Calculations for Different Box Sizes
+
+### 40x40 cm Box (0.16 m²)
+
+| Lamp Type | Minimum Wattage | Recommended Wattage |
+|---|---|---|
+| CFL | 65 W | 105–150 W |
+| HPS | Not recommended (overheating) | — |
+| LED | 30 W | 50–80 W |
+
+A small box is ideal for a single compact plant. LED or CFL is the best choice. Even the minimum HPS (150 W) would be excessive and create heat problems.
+
+### 60x60 cm Box (0.36 m²)
+
+| Lamp Type | Minimum Wattage | Recommended Wattage |
+|---|---|---|
+| CFL | 105–150 W | 200–250 W |
+| HPS | 150 W | 250 W |
+| MH | 150 W | 250 W |
+| LED | 75 W | 100–150 W |
+
+A popular size for 1–2 plants. A 250 W HPS is the classic choice. A 120–150 W LED is the modern alternative with less heat.
+
+### 80x80 cm Box (0.64 m²)
+
+| Lamp Type | Minimum Wattage | Recommended Wattage |
+|---|---|---|
+| HPS | 250 W | 400 W |
+| MH | 250 W | 400 W |
+| CMH | — | 315 W |
+| LED | 130 W | 200–280 W |
+
+A transitional size. A 400 W HPS handles it well. A 240 W LED with quality diodes delivers excellent results.
+
+### 100x100 cm Box (1 m²)
+
+| Lamp Type | Minimum Wattage | Recommended Wattage |
+|---|---|---|
+| HPS | 400 W | 600 W |
+| MH | 400 W | 600 W |
+| CMH | 315 W | 630 W (2x315) |
+| LED | 200 W | 300–480 W |
+
+The most popular size. A 600 W HPS is the gold standard of budget growing. A 300–480 W LED is an efficient replacement with up to 40% electricity savings.
+
+### 120x120 cm Box (1.44 m²)
+
+| Lamp Type | Minimum Wattage | Recommended Wattage |
+|---|---|---|
+| HPS | 600 W | 600 W + supplemental or 1000 W |
+| CMH | 630 W (2x315) | 630 W |
+| LED | 300 W | 450–650 W |
+
+A large box requires serious lighting. A single 600 W HPS may not cover the corners — supplemental side lighting or two lamps are recommended. LED bars distribute light more evenly and are better suited for larger areas.
+
+## Summary Table: Minimum and Optimal Values
+
+| Box Size | LED (W) min./opt. | HPS (W) min./opt. | Target PPFD (flowering) |
+|---|---|---|---|
+| 40x40 cm | 30 / 50–80 | — | 400–600 |
+| 60x60 cm | 75 / 100–150 | 150 / 250 | 500–700 |
+| 80x80 cm | 130 / 200–280 | 250 / 400 | 500–700 |
+| 100x100 cm | 200 / 300–480 | 400 / 600 | 600–900 |
+| 120x120 cm | 300 / 450–650 | 600 / 600+suppl. | 600–900 |
+
+## Practical Tips for Calculations
+
+- **Always add a 10–20% margin** — lamps degrade over time, and plants at peak flowering demand maximum light.
+- **Account for box height** — the taller the box, the greater the distance from lamp to plants, and the greater the intensity loss.
+- **Uniformity matters more than peak intensity** — it is better to have 500 PPFD evenly across the entire area than 900 in the center and 200 at the edges.
+- **Dimmable LED drivers** — allow you to adjust power output. Buy slightly more powerful than needed and use the dimmer for fine-tuning.
+- **Use online calculators** for LEDs — many manufacturers provide PPFD maps for their fixtures at various heights.
+
+## Electricity Cost Calculation
+
+Don't forget to factor in electricity costs when choosing a lamp:
+
+**Monthly consumption (kWh) = Wattage (W) / 1000 x Hours per day x 30**
+
+**Example:** A 600 W HPS on a 12/12 schedule:
+- 600 / 1000 x 12 x 30 = 216 kWh/month
+
+A 300 W LED at equivalent PPFD:
+- 300 / 1000 x 12 x 30 = 108 kWh/month
+
+The difference is 108 kWh per month. At a rate of $0.12/kWh, that's a savings of $12.96/month. Over a year — $155.52, which is comparable to the cost of a LED fixture.

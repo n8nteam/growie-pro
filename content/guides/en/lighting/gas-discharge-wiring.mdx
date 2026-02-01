@@ -1,0 +1,185 @@
+---
+title: "Wiring Gas Discharge Lamps"
+description: "Detailed wiring diagram for HPS and MH lamps: components, electrical schematic, wire selection, grounding, connection sequence, and common mistakes"
+level: advanced
+order: 22
+readTime: 11
+date: "2025-02-01"
+---
+
+# Wiring Gas Discharge Lamps
+
+High-intensity discharge (HID) lamps — high-pressure sodium (HPS) and metal halide (MH) — require special ballast equipment to operate. Unlike incandescent bulbs or LEDs, they cannot be connected directly to 220 V mains power. This guide covers the components, schematics, and connection procedures for HID lamps in a grow box.
+
+## Operating Principle and the Need for Ballast Equipment
+
+A gas discharge lamp is a sealed bulb containing a gas environment through which an electrical discharge passes. Igniting the discharge requires a high-voltage pulse (2–5 kV), and stable operation requires current limiting. Without a ballast, the lamp would instantly fail due to runaway current increase.
+
+## Wiring System Components
+
+### Choke (Ballast)
+
+An electromagnetic choke is an inductive coil that limits the current through the lamp. Key specifications:
+
+- **Wattage**: must exactly match the lamp wattage (250 W choke for a 250 W lamp)
+- **Type**: different chokes are used for HPS and MH, although universal models exist
+- **Power losses**: a magnetic choke consumes an additional 10–15% of the lamp wattage as heat
+- **Weight**: a 400 W choke weighs about 4–5 kg
+
+Quality choke manufacturers: Galad, VS (Vossloh-Schwabe), Philips, Electrostart.
+
+### Ignitor
+
+The ignitor generates high-voltage pulses to strike the lamp. There are two types:
+
+- **Two-terminal (parallel connection)**: connected in parallel with the lamp. The high-voltage pulse passes through the choke, which over time can damage its insulation
+- **Three-terminal (series connection)**: connected between the choke and the lamp. The pulse reaches only the lamp, not the choke. This is the recommended option
+
+Ignitor parameters for selection:
+
+| Lamp Wattage | Ignition Voltage | Recommended Ignitor |
+|---|---|---|
+| 70–150 W | 2–3 kV | 70–150 W ignitor |
+| 250–400 W | 3–4 kV | 250–400 W ignitor |
+| 600–1000 W | 4–5 kV | 600–1000 W ignitor |
+
+### Compensating Capacitor
+
+The capacitor is not a mandatory component but is strongly recommended. It compensates for reactive power, reducing the current in the supply line and decreasing the load on the wiring. It is connected in parallel with the mains input.
+
+### Socket
+
+For lamps 250 W and above, an E40 (Goliath) socket is used. For 70–150 W lamps, an E27 socket may be used. The socket must be ceramic, as plastic sockets cannot withstand the high temperatures of gas discharge lamps.
+
+## Electrical Wiring Diagram
+
+### Diagram with Three-Terminal Ignitor (Recommended)
+
+A three-terminal ignitor has terminals labeled B (ballast), L (lamp), and N (neutral/common).
+
+Connection order:
+
+1. The live wire (L) from the mains connects to the choke input
+2. The choke output connects to terminal B on the ignitor
+3. Terminal L on the ignitor connects to one contact of the lamp socket
+4. Terminal N on the ignitor connects to the neutral wire (N) of the mains
+5. The second contact of the lamp socket connects to the neutral wire (N) of the mains
+6. The capacitor connects in parallel at the input — between the live and neutral mains wires
+
+Wiring diagram in text form:
+
+```
+Mains L ──> Choke input ── Choke output ──> Ignitor (B)
+                                              Ignitor (L) ──> Socket (contact 1)
+Mains N ──> Ignitor (N) ──> Socket (contact 2)
+Capacitor: between Mains L and Mains N
+```
+
+### Diagram with Two-Terminal Ignitor
+
+A two-terminal ignitor is connected in parallel with the lamp:
+
+1. The live wire (L) from the mains connects to the choke input
+2. The choke output connects to one contact of the lamp socket
+3. The second socket contact connects to the neutral wire (N) of the mains
+4. The ignitor connects in parallel with the lamp — to the same two socket contacts
+5. The capacitor connects in parallel with the mains input
+
+## Wire Selection
+
+Proper wire gauge selection ensures the safety and reliability of the system.
+
+| Lamp Wattage | Current Draw (including choke) | Minimum Wire Gauge |
+|---|---|---|
+| 150 W | ~0.9 A | 0.75 mm² |
+| 250 W | ~1.4 A | 1.0 mm² |
+| 400 W | ~2.2 A | 1.5 mm² |
+| 600 W | ~3.3 A | 1.5 mm² |
+| 1000 W | ~5.5 A | 2.5 mm² |
+
+Wire recommendations:
+
+- Use copper stranded wires with double insulation (PVS, VVG types)
+- For the section from the ignitor to the lamp, use wire rated for high voltage (pulses up to 5 kV). The length of this section should not exceed 1.5 meters
+- Make all connections using terminal blocks (Wago, screw terminal strips) or solder with heat shrink
+- Twisted splices are unacceptable in power circuits
+
+## Grounding
+
+Grounding is a mandatory safety requirement:
+
+- The ground wire (PE, yellow-green) connects to the reflector housing, choke housing, and ignitor housing
+- All metal parts accessible to touch must be grounded
+- The ground wire gauge must be at least equal to the live wire gauge
+- Use grounded outlets and do not ignore the third prong of the plug
+- Installing an RCD (residual current device) with a 30 mA trip current on the grow box power line is recommended
+
+## Connection Sequence
+
+Step-by-step assembly instructions:
+
+1. **Disconnect power**. Make sure the circuit breaker is off
+2. **Prepare components**: lay out the choke, ignitor, capacitor, socket, wires, and terminal blocks
+3. **Connect the choke**: live wire from the plug/breaker to the choke input terminal
+4. **Connect the ignitor**: choke output to terminal B (for a three-terminal ignitor)
+5. **Connect the socket**: ignitor terminal L to the center contact of the socket; neutral wire to the side contact of the socket and ignitor terminal N
+6. **Install the capacitor**: in parallel with the mains input (between L and N)
+7. **Complete grounding**: connect the PE wire to all metal housings
+8. **Check all connections**: verify that contacts are secure and there are no exposed wire sections
+9. **Install the lamp**: screw the lamp into the socket
+10. **Turn on power**: apply voltage and wait for the lamp to ignite
+
+## Testing for Proper Operation
+
+After assembly, perform the following checks:
+
+- **Visual inspection**: verify that all wires are securely fastened, there are no exposed sections, and insulation is undamaged
+- **Multimeter check**: measure resistance between live and neutral (should correspond to the choke winding resistance — tens of ohms); between any wire and ground (should be infinity)
+- **Test run**: turn on the system through an RCD. The lamp should ignite within 3–10 seconds
+- **Temperature monitoring**: after 30 minutes of operation, check the temperature of the choke (no more than 100°C), ignitor (no more than 80°C), and connections (should not be hot)
+
+Signs of incorrect wiring:
+
+- Lamp does not ignite — check the ignitor and connection polarity
+- Lamp ignites and goes out cyclically — faulty lamp or mismatched choke wattage
+- Choke hums loudly — normal for magnetic chokes, but excessive humming indicates a problem
+- Circuit breaker trips on startup — short circuit in the wiring; check all connections
+
+## Common Wiring Mistakes
+
+### Swapped Ignitor Terminals
+
+The most common mistake when using a three-terminal ignitor. If terminals B and L are swapped, the high-voltage pulse will pass through the choke, potentially damaging its winding. Always verify terminal markings.
+
+### Wire from Ignitor to Lamp Too Long
+
+The wire from the ignitor to the socket should not exceed 1–1.5 meters. On a long wire, the high-voltage pulse attenuates, and the lamp may fail to ignite.
+
+### Wattage Mismatch
+
+A 250 W choke with a 400 W lamp — the lamp will be underpowered, dim, and degrade quickly. A 400 W choke with a 250 W lamp — the lamp will receive excessive power and may burn out.
+
+### Missing Ground
+
+Operating without grounding creates a risk of electric shock. A metal reflector in the high-humidity environment of a grow box can become energized if insulation breaks down.
+
+### Poor-Quality Connections
+
+Wire splices, especially in the high-voltage circuit (after the ignitor), oxidize over time, creating contact resistance that leads to heating and can cause a fire.
+
+## Electronic Ballast as an Alternative
+
+An electronic ballast combines the functions of the choke, ignitor, and capacitor in a single device. Electronic ballast advantages:
+
+- Simple connection: just an input (220 V mains) and an output (to the lamp)
+- Lower weight and dimensions
+- No hum
+- Lower power losses (5–8% instead of 10–15%)
+- Soft lamp start, extending lamp life
+- Some models support dimming and power switching
+
+Connecting an electronic ballast comes down to two steps: supply 220 V with grounding to the input, and connect the output to the lamp socket. However, the cost of an electronic ballast is significantly higher than a choke, ignitor, and capacitor kit.
+
+## Conclusion
+
+Wiring gas discharge lamps requires basic electrical knowledge and care. Use quality components, follow the wiring diagram, and do not neglect grounding and RCD protection. If you have no experience with electrical work, consult a professional. Incorrect wiring can lead to expensive equipment failure, fire, or electric shock.

@@ -1,0 +1,202 @@
+---
+title: "Connecting Gas Discharge Lamps via an Ignitor"
+description: "Types of ignitors for gas discharge lamps, wiring diagrams for 2-terminal and 3-terminal ignitors, electronic ballast vs magnetic choke comparison, electronic ballasts, and troubleshooting"
+level: advanced
+order: 23
+readTime: 9
+date: "2025-02-01"
+---
+
+# Connecting Gas Discharge Lamps via an Ignitor
+
+The ignitor is a key component in the wiring of high-intensity discharge lamps. Without it, an HPS or MH lamp simply will not ignite: ionizing the gas environment inside the bulb requires a brief high-voltage pulse, which the ignitor generates. In this article, we will examine ignitor types, wiring diagrams, and troubleshooting in detail.
+
+## What Is an Ignitor and How Does It Work
+
+An ignitor is an electronic device that generates a series of high-voltage pulses ranging from 2 to 5 kV. These pulses are applied to the lamp electrodes, causing a breakdown of the gas environment, after which an arc discharge forms. The choke (ballast) then limits the discharge current to the operating level.
+
+The ignitor works by charging a capacitor through a resistor, followed by a rapid discharge through a pulse transformer. Pulses are generated at a frequency of several hertz until the lamp ignites. Once the discharge stabilizes, the voltage across the lamp drops below the ignitor's triggering threshold, and it automatically stops generating pulses.
+
+## Types of Ignitors
+
+### Two-Terminal Ignitors (Parallel Connection)
+
+A two-terminal ignitor has two leads and is connected in parallel with the lamp. This is the simplest design.
+
+Characteristics:
+
+- Leads are labeled L (lamp) and N (neutral)
+- Connected directly to the lamp socket terminals
+- The high-voltage pulse passes through the entire circuit, including the choke winding
+- Lower cost than three-terminal ignitors
+
+Disadvantages of parallel connection:
+
+- High-voltage pulses pass through the choke winding, gradually destroying inter-turn insulation
+- Higher level of radio interference
+- Reduced choke lifespan
+- Strongly not recommended for lamps above 400 W
+
+### Three-Terminal Ignitors (Series Connection)
+
+A three-terminal ignitor is installed between the choke and the lamp and has three terminals:
+
+- **B (Ballast)** — input from the choke
+- **L (Lamp)** — output to the lamp
+- **N (Neutral)** — common/neutral wire
+
+Advantages of series connection:
+
+- The high-voltage pulse is applied only to the section from the ignitor to the lamp and does not pass through the choke
+- Extended choke lifespan
+- Lower level of radio interference
+- More reliable and safer circuit
+- Recommended for lamps of any wattage
+
+## Wiring Diagrams with an Ignitor
+
+### Diagram with Two-Terminal Ignitor
+
+```
+Live (L) ──> [Choke] ──> Socket (contact 1) ──┐
+                                                 ├── [2-terminal ignitor]
+Neutral (N) ────────────> Socket (contact 2) ──┘
+```
+
+Sequence:
+
+1. The live wire is fed to the choke input
+2. The choke output goes to one contact of the lamp socket
+3. The neutral wire goes to the second socket contact
+4. The ignitor is connected in parallel with the socket — to both of its contacts
+
+### Diagram with Three-Terminal Ignitor
+
+```
+Live (L) ──> [Choke] ──> Ignitor (B) ── Ignitor (L) ──> Socket (contact 1)
+Neutral (N) ────────────> Ignitor (N) ──────────────> Socket (contact 2)
+```
+
+Sequence:
+
+1. The live wire is fed to the choke input
+2. The choke output connects to terminal B on the ignitor
+3. Terminal L on the ignitor connects to the center contact of the socket
+4. The neutral wire connects to terminal N on the ignitor and to the side contact of the socket
+
+Important notes:
+
+- The wire from ignitor terminal L to the socket should be as short as possible (no more than 1.5 m)
+- This wire must be rated for voltages up to 5 kV or routed separately from other wires
+- Do not swap terminals B and L — this will send the pulse through the choke
+
+## Electronic Ballast vs Magnetic Choke + Ignitor
+
+A comparison of two approaches to connecting gas discharge lamps:
+
+| Parameter | Magnetic Choke + Ignitor | Electronic Ballast |
+|---|---|---|
+| Cost | Low | Higher |
+| Weight | 4–7 kg | 1–3 kg |
+| Power losses | 10–15% | 5–8% |
+| Noise (hum) | Yes | No |
+| Heat output | Significant | Moderate |
+| Lifespan | 10+ years | 5–10 years |
+| Soft start | No | Yes |
+| Dimming | Not possible | In some models |
+| Power switching | No | In some models |
+| Repairability | High | Low |
+| Short-circuit protection | No (breaker needed) | Built-in |
+
+### When to Choose a Magnetic Choke
+
+- Limited budget
+- Maximum reliability and longevity needed
+- You have electrical wiring skills
+- The lamp is used at full power without the need for dimming
+
+### When to Choose an Electronic Ballast
+
+- Easy connection is important
+- Dimming or power switching is needed
+- Silent operation is critical
+- The grow box is located in a living space
+
+## Electronic Ballasts
+
+Modern electronic ballasts combine the functions of a choke, ignitor, and capacitor. They operate at high frequency (20–50 kHz) instead of the mains 50 Hz, which provides several advantages.
+
+### How Electronic Ballasts Work
+
+1. An input rectifier converts 220 V AC to DC
+2. A power factor corrector brings cos phi close to 1
+3. An inverter converts DC to high-frequency AC
+4. A control circuit generates starting pulses and stabilizes the operating current
+
+### Popular Electronic Ballast Models for Grow Boxes
+
+- **600 W electronic ballast with dimming**: supports 50%, 75%, 100%, and SuperLumen (110%) modes. Allows using one lamp at different growth stages
+- **Universal electronic ballasts**: work with both HPS and MH lamps, switching lamp type with a single button
+- **Digital electronic ballasts with display**: show power consumption, lamp hours, and temperature
+
+### Connecting an Electronic Ballast
+
+Connecting an electronic ballast is significantly simpler than assembling a magnetic choke setup:
+
+1. Connect the input cable (live, neutral, ground) to the electronic ballast input terminals
+2. Connect the output cable from the electronic ballast output terminals to the lamp socket
+3. Install the lamp and turn on the power
+
+No additional components (ignitor, capacitor) are required.
+
+## Troubleshooting
+
+### Lamp Does Not Ignite
+
+Possible causes and solutions:
+
+- **Faulty ignitor**: check if you can hear characteristic clicking when turning on. If silent — the ignitor has failed. Replace it
+- **Swapped ignitor terminals**: verify the correct connection of B, L, N
+- **Faulty lamp**: try replacing the lamp with a known working one
+- **Open circuit in the choke**: measure the winding resistance with a multimeter. For a 400 W choke, it should be 10–30 ohms. Infinity means an open circuit
+- **Wire to lamp too long**: shorten the wire from the ignitor to the socket
+
+### Lamp Ignites Then Goes Out
+
+- **Worn lamp**: a degraded lamp requires higher voltage to sustain the discharge. Replace the lamp
+- **Mismatched choke wattage**: check the markings on the choke and lamp
+- **Low mains voltage**: measure voltage at the outlet. If below 200 V, the lamp may operate unstably
+- **Poor socket contact**: inspect and clean the contacts
+
+### Choke Overheating
+
+- A magnetic choke temperature can reach 100–110°C — this is the upper limit of normal
+- If the choke is so hot you cannot touch it for more than a second, it is overheating
+- Causes: inter-turn short circuit, wattage mismatch, poor ventilation
+- An overheating choke should be replaced
+
+### Loud Choke Hum
+
+- Moderate humming at 100 Hz is normal for a magnetic choke
+- Excessive hum may indicate loosened core laminations
+- Placing the choke on a vibration-dampening pad (rubber, foam) reduces vibration
+- If the hum is unbearable, consider switching to an electronic ballast
+
+### Ignitor Clicks But Lamp Does Not Ignite
+
+- Check the lamp — it may be faulty
+- Check the length and integrity of the wire from the ignitor to the socket
+- Make sure the socket contacts are clean and provide good connection
+- If the lamp is new and wires are short — the ignitor may be faulty (insufficient pulse voltage)
+
+## Safety Tips
+
+- Perform all wiring work only with the power disconnected
+- The capacitor can retain a charge after disconnection — discharge it before working
+- After replacing an ignitor, always verify the wiring before turning on
+- Use an appropriately rated circuit breaker on the power supply line
+- When working with electronic ballasts, do not open the housing — high-voltage components are present inside
+
+## Conclusion
+
+Choosing the ignitor type and connection method for a gas discharge lamp is an important decision that affects safety, reliability, and equipment lifespan. For new installations, using a three-terminal ignitor or switching to an electronic ballast is recommended. Regardless of the approach, follow electrical safety rules, use quality components, and do not neglect grounding.

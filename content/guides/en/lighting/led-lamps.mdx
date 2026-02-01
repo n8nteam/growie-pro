@@ -1,0 +1,208 @@
+---
+title: "LEDs. HPS vs LED"
+description: "Comprehensive guide to LED lighting for grow boxes: LED types (COB, SMD, quantum board), spectrums, efficiency, comparison with HPS, choosing drivers, popular chips, and DIY assembly"
+level: intermediate
+order: 13
+readTime: 14
+date: "2025-02-01"
+---
+
+# LEDs. HPS vs LED
+
+LED lighting has revolutionized indoor gardening. In recent years, LED technology has reached such levels of efficiency that it has seriously challenged the legendary HPS. In this article, we'll break down every aspect of LED lighting for grow boxes — from basic principles to choosing specific components.
+
+## How LEDs Work
+
+An LED (Light Emitting Diode) is a semiconductor device that emits light when electric current passes through it. It's based on a p-n junction — the boundary between p-type semiconductors (with excess "holes") and n-type semiconductors (with excess electrons).
+
+When forward voltage is applied to the p-n junction, electrons and holes recombine in the active region, releasing energy as photons. The wavelength (color) of emission is determined by the bandgap of the semiconductor and depends on the chemical composition of the crystal.
+
+Two approaches are used to produce white light:
+
+- Blue LED + yellow phosphor — the most common method. A blue crystal (InGaN) is coated with a layer of yttrium aluminum garnet (YAG) phosphor that converts some of the blue light to yellow. The combination produces white light.
+- RGB mixing — three crystals (red, green, blue) in a single package. Less efficient but allows flexible spectrum control.
+
+For horticulture, both full-spectrum white LEDs and monochromatic LEDs (red 660 nm, far-red 730 nm, blue 450 nm, UV 395 nm) are used.
+
+## Types of LEDs for Grow Boxes
+
+### SMD LEDs (Surface Mount Device)
+
+Surface-mount LEDs are the foundation of modern LED grow lights. Their small size allows hundreds of diodes to be placed on a single board, ensuring uniform light distribution.
+
+Popular series:
+
+- Samsung LM301B — efficiency up to 2.74 umol/J, 3000–3500K + 660 nm
+- Samsung LM301H — up to 3.10 umol/J, improved version of LM301B
+- Samsung LM281B+ — budget alternative with respectable efficiency
+- Osram (ams OSRAM) GW series — high reliability and stability
+- Bridgelux EB Strip — ready-made strips for DIY builds
+
+SMD LEDs are the optimal choice for most applications. They offer the best balance of efficiency, light uniformity, and cost.
+
+### COB LEDs (Chip on Board)
+
+A COB is an array of many small crystals mounted directly on a board and covered with a common phosphor layer. The result is a powerful point light source.
+
+COB characteristics:
+
+- High light flux density
+- Single module power: 30–300 W
+- Good canopy penetration due to the point-source nature
+- Requires massive heatsinks due to concentrated heat
+- Less uniform area coverage compared to SMD arrays
+
+Popular COBs: Citizen CLU048 1212, Cree CXB3590, Bridgelux Vero 29. COBs were popular from 2016–2019 but are now outperformed by SMD quantum boards.
+
+### Quantum Board
+
+A quantum board is a large PCB with hundreds of SMD LEDs placed at optimal density. This format, popularized by HLG (Horticulture Lighting Group), has become the de facto industry standard.
+
+Advantages of quantum boards:
+
+- Maximum uniform light distribution across the area
+- Low current density per diode — high efficiency and longevity
+- Moderate heat output distributed across a large area
+- Thin profile — doesn't take up height in the grow box
+- Passive cooling (heatsink without a fan)
+
+## Full Spectrum vs Red-Blue
+
+### Red-Blue (Blurple) LEDs
+
+Early LED grow lights used a combination of red (660 nm) and blue (450 nm) LEDs, as these wavelengths coincide with the absorption peaks of chlorophylls A and B. Visually, this light appears pink-purple.
+
+Problems with red-blue LEDs:
+
+- Narrow spectrum ignores the contribution of other wavelengths to photosynthesis
+- Doesn't account for the Emerson effect (synergy of red and far-red)
+- Green light, once thought useless, penetrates deeper into the leaf and lower canopy
+- Impossible to visually assess plant health under pink light
+- Unpleasant for the eyes during extended work in the grow box
+
+### Full Spectrum
+
+Modern LEDs use white diodes (3000–3500K) with the addition of red 660 nm and sometimes far-red 730 nm and UV 395 nm. This approach provides:
+
+- The entire PAR range (400–700 nm) with emphasis on needed wavelengths
+- Natural visual perception — comfortable work with plants
+- More balanced plant morphology
+- Activation of all photoreceptors (chlorophylls, carotenoids, phytochromes, cryptochromes)
+- Emerson effect with the addition of far-red 730 nm
+
+Typical formula for a modern LED grow light: 80% white 3000K + 10% white 5000K + 5% red 660 nm + 5% far-red 730 nm.
+
+## Efficiency: umol/J
+
+The key efficiency metric for LED grow lights is PPE (Photosynthetic Photon Efficacy), measured in micromoles of photons per joule of electrical energy (umol/J).
+
+Evolution of LED efficiency:
+
+| Year | Typical Efficiency | Top Efficiency |
+|------|-------------------|----------------|
+| 2015 | 1.0–1.3 umol/J | 1.7 umol/J |
+| 2018 | 1.7–2.1 umol/J | 2.5 umol/J |
+| 2020 | 2.2–2.5 umol/J | 2.8 umol/J |
+| 2023 | 2.5–2.8 umol/J | 3.1 umol/J |
+| 2025 | 2.7–3.0 umol/J | 3.3+ umol/J |
+
+For comparison: a 600 W HPS with an electronic ballast delivers about 1.7 umol/J. Modern LEDs surpass this by 1.5–2 times.
+
+## LED vs HPS Comparison
+
+| Parameter | LED (quantum board) | HPS 600 W + electronic ballast |
+|-----------|--------------------|---------------------------------|
+| Efficiency (PPE) | 2.5–3.0 umol/J | 1.7 umol/J |
+| Consumption for 1000 PPFD per 1 m² | 300–400 W | 600–700 W |
+| Spectrum | Customizable, full | Yellow-orange |
+| Heat output | 300–400 W of heat | 600–700 W of heat |
+| Directionality | Downward (120°) | Omnidirectional (needs reflector) |
+| Uniformity | High | Depends on reflector |
+| Lifespan | 50,000–100,000 h | 12,000–24,000 h |
+| Degradation | Less than 10% over 50,000 h | 20–30% over 12,000 h |
+| Initial cost | High | Low |
+| Electricity cost (per year) | 40–50% lower | Baseline |
+| Lamp replacement | Not required | Every 12–18 months |
+| Ventilation | Moderate | Heavy |
+| Risk of plant damage | Light stress | Heat + light stress |
+| Canopy penetration | Medium | High |
+
+Conclusion: LED wins on efficiency, longevity, and ease of use. HPS wins on initial cost and light penetration. In the long term, LED is more economical thanks to lower electricity consumption.
+
+## LED Drivers
+
+A driver is a constant-current power supply for LEDs. A quality driver is critically important for the longevity and efficiency of an LED system.
+
+Key specifications:
+
+- Output current (mA) — must match the recommendations for the specific LEDs
+- Output voltage (V) — determined by the number of series-connected diodes
+- Power (W) — the sum of all connected LED power
+- Efficiency — good drivers achieve 90–95%
+- Dimming — the ability to adjust power
+
+The gold standard is Mean Well drivers from the HLG, ELG, and XLG series. They are reliable, efficient, and feature overload, overheating, and short-circuit protection. They support dimming via potentiometer or PWM signal.
+
+Examples:
+
+- Mean Well HLG-240H-48A — for a 240 W panel
+- Mean Well HLG-480H-48A — for a 480 W panel
+- Mean Well XLG-200-H-A — budget option for 200 W
+
+## Heatsinks and Cooling
+
+Although LEDs are more efficient than HPS, they still generate heat that must be dissipated. Overheating LEDs leads to reduced efficiency and accelerated degradation.
+
+Cooling types:
+
+- Passive aluminum heatsinks — silent, reliable. Used in quantum boards. Sufficient for power densities up to 30–35 W/dm².
+- Active cooling (heatsink + fan) — for COBs and high-power modules. More effective but creates noise and has a failure point (the fan).
+- Aluminum profile — for LED strips (Bridgelux EB Strip). Sufficient at moderate power levels.
+
+Rule of thumb: LED junction temperature should not exceed 60–65°C to maintain rated efficiency and lifespan.
+
+## What to Look for When Buying
+
+The LED grow light market is flooded with products of varying quality. Key criteria:
+
+- PPE (umol/J) — the primary efficiency metric. A good fixture delivers 2.5+ umol/J.
+- Actual power vs. claimed — some manufacturers list "equivalent" wattage. Look at wall power draw.
+- LED brand — Samsung LM301B/H, Osram, Bridgelux — proven brands.
+- Driver — Mean Well or equivalent quality. Cheap no-name drivers are the main failure point.
+- Spectrum — full spectrum with added red 660 nm is preferred.
+- Uniformity — a PPFD map (if provided) shows light distribution across the area.
+- Warranty — good manufacturers offer 3–5 years.
+- Dimming — the ability to reduce power for seedlings and energy savings.
+
+## Popular Chips
+
+### Samsung LM301B / LM301H
+
+The most popular LEDs for horticulture. LM301B delivers up to 220 lm at 65 mA with an efficiency of 2.74 umol/J. LM301H is the improved version with a record 3.10 umol/J and a special phosphor optimized for the PAR range.
+
+### Osram (ams OSRAM)
+
+German quality with an emphasis on reliability. The DURIS and OSLON series provide stable performance at high currents. The OSLON SSL red 660 nm is one of the best monochromatic red LEDs.
+
+### Bridgelux
+
+An American manufacturer with an excellent price-to-performance ratio. The EB (Evolve Bright) series offers ready-made strips for DIY builds, eliminating the need to solder hundreds of diodes.
+
+## DIY LED: Building Your Own
+
+Building an LED grow light yourself allows you to achieve top-tier quality at 50–70% of the cost of a factory equivalent.
+
+What you need for a 200 W DIY quantum board:
+
+- 2 boards with Samsung LM301B (100 W each)
+- Mean Well HLG-240H-48A driver (with power headroom)
+- Aluminum heatsink
+- Wires, Wago connectors, mounting hardware
+- Potentiometer for dimming
+- Hangers
+
+Key skills: basic soldering (or using pre-made boards with connectors), understanding of electrical safety, ability to calculate current and voltage. Detailed instructions are available on numerous specialized forums.
+
+DIY LED is not just about saving money — it's an opportunity to create a fixture with ideal parameters for your specific grow box: the right wattage, optimal spectrum, and perfect dimensions.
+
+LED lighting is the present and future of indoor gardening. Every year, LEDs become more efficient, more affordable, and more versatile, making them the best choice for most growers.

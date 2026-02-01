@@ -1,0 +1,242 @@
+---
+title: "Fluorescent/Area: Coverage Calculation"
+description: "Formulas for calculating the number of fluorescent lamps per grow box area: lighting standards for different stages, configuration examples, compensating for brightness drop-off, and placement layouts"
+level: intermediate
+order: 20
+readTime: 8
+date: "2025-02-01"
+---
+
+# Fluorescent/Area: Coverage Calculation
+
+One of the most common questions from beginner growers is: "How many lamps do I need?" For fluorescent lamps, this question is especially relevant because a single lamp will never cover a serious area. You need an array, and it must be properly calculated. This article covers formulas, standards, examples, and practical placement layouts.
+
+## Basic Units of Measurement
+
+Before crunching numbers, let's agree on the units:
+
+- Lumen (lm) — the total luminous flux of a lamp as perceived by the human eye. Listed on the packaging.
+- Lux (lx) — illuminance of a surface. 1 lx = 1 lm per 1 m². Measured with a lux meter.
+- PPFD (umol/m2/s) — Photosynthetic Photon Flux Density. The number of PAR-range photons (400–700 nm) hitting one square meter per second. Measured with a PAR meter.
+- PPF (umol/s) — the total Photosynthetic Photon Flux of a lamp.
+
+For fluorescent lamps, the approximate conversion factor is: 1000 lx corresponds to roughly 14–16 umol/m2/s PPFD (varies with spectrum).
+
+## Lighting Standards for Plants
+
+Minimum and optimal illuminance values depend on the growth stage:
+
+| Stage | Minimum (lux) | Optimal (lux) | Minimum (PPFD) | Optimal (PPFD) |
+|-------|--------------|---------------|----------------|----------------|
+| Germination | 3,000 | 5,000–7,000 | 45 | 75–100 |
+| Seedlings/clones | 5,000 | 7,000–10,000 | 75 | 100–150 |
+| Vegetation | 15,000 | 25,000–35,000 | 200 | 350–500 |
+| Flowering | 25,000 | 40,000–60,000 | 350 | 600–900 |
+
+Important: achieving the optimal level (40,000+ lux) for flowering under fluorescent lamps is extremely difficult. A realistic target is 20,000–30,000 lux, which will produce acceptable though not maximal flowering.
+
+## Formula for Calculating Lamp Count
+
+### Basic Formula
+
+Number of lamps = (Required illuminance x Area) / (Luminous flux per lamp x Utilization factor)
+
+Where:
+
+- Required illuminance — in lux (from the table above)
+- Area — in square meters
+- Luminous flux — in lumens (from the lamp packaging)
+- Utilization factor — the fraction of light that actually reaches the plants
+
+### Utilization Factor
+
+This factor accounts for light losses and depends on the grow box construction:
+
+- Reflective walls (Mylar, foil-backed insulation): 0.6–0.7
+- Matte white walls: 0.5–0.6
+- Dark or non-reflective walls: 0.3–0.4
+- Open space (no walls): 0.3–0.35
+
+For a typical grow box with reflective walls, use a factor of 0.65.
+
+### Calculation Example
+
+Task: calculate the number of T5 HO 54 W lamps for vegetation in a 60x60 cm area.
+
+Given:
+
+- Area: 0.6 x 0.6 = 0.36 m²
+- Required illuminance: 25,000 lux (vegetation optimum)
+- Luminous flux of T5 HO 54 W: 4450 lm
+- Utilization factor: 0.65
+
+Calculation: N = (25,000 x 0.36) / (4,450 x 0.65) = 9,000 / 2,892 = 3.1
+
+Round up: 4 T5 HO 54 W lamps.
+
+Total power: 4 x 54 = 216 W. Total flux: 4 x 4,450 = 17,800 lm. Calculated illuminance: 17,800 x 0.65 / 0.36 = 32,100 lux — more than enough for vegetation.
+
+## Lumens per Square Meter for Different Stages
+
+A convenient rule of thumb for lumens per area:
+
+| Stage | lm/m² (minimum) | lm/m² (optimal) | Fluorescent W/m² (guideline) |
+|-------|-----------------|-----------------|------------------------------|
+| Seedlings | 5,000 | 10,000 | 80–120 W/m² |
+| Vegetation | 15,000 | 30,000 | 200–350 W/m² |
+| Flowering | 25,000 | 50,000 | 350–500+ W/m² |
+
+For flowering, the fluorescent wattage requirement per square meter reaches 500 W — this is the boundary of practicality for fluorescent lamps. For areas over 0.5 m², it's more efficient to switch to HPS or LED for flowering.
+
+## Configuration Examples
+
+### 40x40 cm Area (0.16 m²) — Micro Grow
+
+Option 1 — T5 HO:
+
+- 2 T5 HO 24 W lamps (549 mm) + reflector
+- Total power: 48 W
+- Luminous flux: 2 x 2,000 = 4,000 lm
+- Illuminance: 4,000 x 0.65 / 0.16 = 16,250 lux
+- Sufficient for: vegetation (good), flowering (modest)
+
+Option 2 — CFL:
+
+- 1 CFL 85 W E40 (6500K) + 1 CFL 55 W E27 (2700K)
+- Total power: 140 W
+- Luminous flux: ~9,500 lm
+- Illuminance: 9,500 x 0.65 / 0.16 = 38,600 lux
+- Sufficient for: full cycle with good results
+
+Option 3 — Combo:
+
+- 2 T5 HO 24 W lamps on top + 2 CFL 23 W on the sides
+- Total power: 94 W
+- Good coverage from all angles for a single plant
+
+### 60x60 cm Area (0.36 m²) — Standard Small Box
+
+Option 1 — T5 HO panel:
+
+- 4 T5 HO 54 W lamps (1149 mm)
+- Total power: 216 W
+- Luminous flux: 4 x 4,450 = 17,800 lm
+- Illuminance: 17,800 x 0.65 / 0.36 = 32,100 lux
+- Sufficient for: excellent vegetation, moderate flowering
+
+Option 2 — T5 HO maximum:
+
+- 6 T5 HO 54 W lamps
+- Total power: 324 W
+- Luminous flux: 26,700 lm
+- Illuminance: 48,200 lux
+- Sufficient for: full cycle with good results
+
+Option 3 — CFL array:
+
+- 3 CFL 85 W E40 (2 pcs 6500K + 1 pc 2700K for vegetation)
+- Total power: 255 W
+- Luminous flux: ~15,000 lm
+- Illuminance: 27,100 lux
+- Sufficient for: good vegetation, moderate flowering
+
+### 80x80 cm Area (0.64 m²) — Fluorescent Practicality Limit
+
+At this size, fluorescents become impractical, but if no other options exist:
+
+- 8 T5 HO 54 W lamps
+- Total power: 432 W
+- Luminous flux: 35,600 lm
+- Illuminance: 36,200 lux
+- Borderline minimum for flowering, good for vegetation
+
+At this area, a 250 W HPS or 200 W LED will deliver better results at lower consumption.
+
+## Compensating for Brightness Drop-off at Edges
+
+Fluorescent lamps are linear sources, and illuminance inevitably drops toward the edges of the area. There are several ways to compensate:
+
+### Reflective Walls
+
+The single most important factor. Quality reflective walls return up to 85–95% of incident light back to the plants.
+
+Materials ranked by reflectance:
+
+- Mirror Mylar: 92–97% reflectance
+- Matte white paint: 85–90%
+- Foil-backed insulation: 80–90%
+- Aluminum foil (matte side out): 70–80%
+- White fabric: 65–75%
+
+Strongly discouraged: foil shiny side out — creates hot spots (uneven reflection); crumpled foil — scatters ineffectively.
+
+### Overlapping Lamp Placement
+
+Lamps should be positioned so that their light footprints overlap. For T5 HO, the optimal spacing between lamp centers is 8–12 cm. Greater spacing creates dark bands.
+
+### Additional Side Lamps
+
+CFL lamps of 23–30 W mounted vertically on the box walls significantly increase illuminance in the peripheral zone. Two CFLs on the sides add 20–30% to total PPFD at lower canopy levels.
+
+### Plant Positioning
+
+Rotating pots every 2–3 days (90–180° turn) ensures even development. Place taller plants toward the edges, shorter ones in the center under maximum light.
+
+## Practical Placement Layouts
+
+### Layout 1: Parallel Rows (for T5/T8)
+
+Lamps arranged in parallel, horizontally. The classic layout for ready-made T5 panels.
+
+For 60x60 cm — four T5 HO 54 W lamps spaced 15 cm apart:
+
+- First lamp at 7.5 cm from the wall
+- Second — 22.5 cm
+- Third — 37.5 cm
+- Fourth — 52.5 cm
+
+This ensures uniform coverage with minimal dark zones. A reflector for each lamp (or a shared panel reflector) directs light downward.
+
+### Layout 2: Grid (for CFLs)
+
+CFLs arranged in a 2x2 or 3x3 grid for uniform coverage.
+
+For 60x60 cm — four 55 W CFLs in a 2x2 pattern:
+
+- Each lamp offset 15 cm from the nearest wall
+- Distance between lamps: 30 cm
+- Lamps oriented vertically (base up)
+
+### Layout 3: Central + Peripheral
+
+One powerful CFL (85–125 W) in the center + 4 low-wattage CFLs (23–30 W) at the corners. The central lamp provides the main light output, while the corner lamps fill the periphery and lower canopy levels.
+
+### Layout 4: Multi-Level
+
+For advanced growers — lamps at different heights. Upper tier (T5 or powerful CFLs) — main lighting. Lower tier (23 W CFLs on the walls) — supplemental lighting for lower branches. The upper tier rises as plants grow; the lower tier stays in place.
+
+## Quick Selection Calculator
+
+For quick selection without complex formulas, use these guidelines:
+
+Watts per area rule (for fluorescents only):
+
+- Seedlings: 80–120 actual watts per 0.1 m² (approximately 30x30 cm)
+- Vegetation: 120–200 actual watts per 0.1 m²
+- Flowering: 200–300 actual watts per 0.1 m²
+
+T5 HO 54 W lamp count rule:
+
+- 30x30 cm: 1–2 lamps
+- 40x40 cm: 2–3 lamps
+- 60x60 cm: 4–6 lamps
+- 80x80 cm: 8+ lamps (better to switch lighting type)
+
+CFL 85 W rule:
+
+- 30x30 cm: 1 lamp
+- 40x40 cm: 1–2 lamps
+- 60x60 cm: 2–3 lamps
+- 80x80 cm: not recommended
+
+Lighting calculation isn't an exact science — it's a set of guidelines proven by practice. It's better to have a slight power surplus than a deficit. At the same time, remember that for fluorescent lamps, distance to plants is the critical factor: keep the lamps as close to the canopy as possible, and your calculation will pay off with maximum return from every watt.

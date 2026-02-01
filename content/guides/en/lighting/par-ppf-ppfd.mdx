@@ -1,0 +1,195 @@
+---
+title: "Light Efficiency: PAR, PPF, PPFD"
+description: "A detailed breakdown of the key lighting metrics for plants: PAR, PPF, PPFD, and DLI. How to measure them, target values, and tables of optimal levels."
+level: intermediate
+order: 8
+readTime: 11
+date: "2025-02-01"
+---
+
+# Light Efficiency: PAR, PPF, PPFD
+
+Lumens and watts are specifications familiar to the average consumer. But evaluating the quality of plant lighting requires different metrics. PAR, PPF, PPFD, and DLI are the language in which plants "think." Understanding these quantities will help you select truly effective lighting and configure it optimally.
+
+## PAR — Photosynthetically Active Radiation
+
+### Definition
+
+PAR (Photosynthetically Active Radiation) is the range of electromagnetic radiation with wavelengths from **400 to 700 nm** that plants use for photosynthesis.
+
+PAR is **not a unit of measurement** but a description of a range. When people say "PAR light," they mean light in the 400–700 nm range. PAR can be measured in various units: watts, micromoles of photons, etc.
+
+### PAR Boundaries
+
+- **400 nm** — lower boundary (violet light). Radiation shorter than 400 nm is ultraviolet, which also affects plants (notably UVA 315–400 nm and UVB 280–315 nm), but is not included in the classical definition of PAR.
+- **700 nm** — upper boundary (far-red). Radiation from 700–780 nm (far-red) also affects plants through the phytochrome system, but is traditionally not included in PAR.
+
+Modern research extends the concept of the useful plant range to ePAR (extended PAR, 400–750 nm) or even 350–750 nm, but the classical definition of PAR remains 400–700 nm.
+
+### What Happens in the PAR Range
+
+Different wavelengths within the PAR range affect plants differently:
+
+- **400–450 nm (blue-violet)** — promotes compact growth, stem thickening, influences phototropism and stomatal opening
+- **450–500 nm (blue)** — primary absorption peak of chlorophyll B, active participation in photosynthesis
+- **500–570 nm (green)** — penetrates deeper into leaf tissue and canopy, participates in photosynthesis of inner layers
+- **570–620 nm (yellow/orange)** — moderate photosynthetic efficiency
+- **620–670 nm (red)** — maximum quantum efficiency of photosynthesis, peak absorption of chlorophyll A
+- **670–700 nm (far-red)** — influences phytochrome balance, stimulates flowering and elongation
+
+## PPF — Photosynthetic Photon Flux
+
+### Definition
+
+PPF (Photosynthetic Photon Flux) is the total number of photons in the PAR range (400–700 nm) emitted by a light source per second. It is measured in **micromoles per second (umol/s)**.
+
+One micromole is approximately 6.022 x 10¹⁷ photons (Avogadro's number divided by one million).
+
+### Relevance to Growers
+
+PPF characterizes the **total output of a lamp**. It is the equivalent of lumens, but for plants. The higher the PPF, the more useful photons the fixture emits.
+
+**Example:** A 240 W LED Quantum Board may have a PPF of 560 umol/s. This means it emits 560 umol of photons per second in the 400–700 nm range.
+
+### PPF and Efficiency
+
+One of the most important fixture characteristics is derived from PPF — **photon efficacy**:
+
+**Efficacy (umol/J) = PPF (umol/s) / Power (W)**
+
+Since 1 W = 1 J/s, the unit of measurement is umol/J.
+
+Typical efficacy values:
+
+| Fixture Type | Efficacy (umol/J) |
+|---|---|
+| CFL | 0.8–1.2 |
+| T5 fluorescent | 1.0–1.5 |
+| 600 W HPS | 1.4–1.7 |
+| MH | 1.0–1.4 |
+| 315 W CMH | 1.5–1.9 |
+| Budget LED | 1.5–2.0 |
+| Mid-range LED | 2.0–2.5 |
+| Top-tier LED (2024+) | 2.5–3.0 |
+
+## PPFD — Photosynthetic Photon Flux Density
+
+### Definition
+
+PPFD (Photosynthetic Photon Flux Density) is the number of photons in the PAR range reaching a unit of area per second. It is measured in **umol/s/m²** (micromoles per second per square meter).
+
+If PPF is a characteristic of the lamp, then PPFD is a characteristic of a **specific point** under the lamp. PPFD depends on:
+
+- The lamp's power and PPF
+- Distance from the lamp to the measurement point
+- Angle of incidence
+- Presence of reflectors and reflective walls
+
+### How to Measure PPFD
+
+**Instruments:**
+
+- **Quantum sensor (PAR meter)** — a professional instrument. Top models: Apogee SQ-520, LI-COR LI-190R. Cost ranges from a few hundred to several thousand dollars.
+- **Budget PAR meters** — Photobio, Hydrofarm, and others. Less precise but provide acceptable results. Cost from $50+.
+- **Lux meter + conversion** — an acceptable method if you know the conversion factor for your lamp type.
+- **Smartphone apps** — only for very rough estimates. Margin of error 30–50%.
+
+**Measurement procedure:**
+
+1. Set the lamp at its working height
+2. Divide the area into a grid (minimum 9 points for a 100x100 cm box: 3 rows of 3 points)
+3. Measure PPFD at each point at canopy level
+4. Record all values in a table
+5. Calculate the average PPFD, as well as the minimum and maximum values
+
+**Example PPFD map for a 240 W LED QB at 45 cm height in a 100x100 cm box:**
+
+| | Left | Center | Right |
+|---|---|---|---|
+| **Back** | 320 | 450 | 310 |
+| **Middle** | 440 | 680 | 430 |
+| **Front** | 300 | 430 | 290 |
+
+Average PPFD: 406 umol/s/m². Non-uniformity: 680/290 = 2.3:1.
+
+### Target PPFD Values
+
+| Growth Stage | Minimum PPFD | Optimal PPFD | Maximum PPFD |
+|---|---|---|---|
+| Seedlings | 100 | 200–300 | 400 |
+| Clones / rooting | 50–100 | 100–200 | 300 |
+| Vegetation (no CO₂) | 250 | 400–600 | 800 |
+| Flowering (no CO₂) | 400 | 600–800 | 900 |
+| Vegetation (with CO₂ 1200 ppm) | 400 | 600–800 | 1000 |
+| Flowering (with CO₂ 1200 ppm) | 600 | 800–1200 | 1500 |
+
+**Critical point:** PPFD values above 800 without supplemental CO₂ will not yield a proportional increase in photosynthesis. At atmospheric CO₂ levels (~420 ppm), photosynthesis saturates at approximately 800 PPFD. Exceeding this without CO₂ enrichment wastes electricity and risks light stress.
+
+## DLI — Daily Light Integral
+
+### Definition
+
+DLI (Daily Light Integral) is the total number of photons in the PAR range received by a plant over the course of a day. It is measured in **mol/m²/day**.
+
+DLI accounts for both intensity (PPFD) and duration of illumination. It is a more comprehensive metric than PPFD alone.
+
+### Calculation Formula
+
+**DLI (mol/m²/day) = PPFD (umol/s/m²) x Light hours x 3600 / 1,000,000**
+
+Or simplified:
+
+**DLI = PPFD x Hours x 0.0036**
+
+### DLI Calculation Examples
+
+| PPFD (umol/s/m²) | 18/6 Schedule | 12/12 Schedule | 20/4 Schedule |
+|---|---|---|---|
+| 200 | 12.96 | 8.64 | 14.40 |
+| 400 | 25.92 | 17.28 | 28.80 |
+| 600 | 38.88 | 25.92 | 43.20 |
+| 800 | 51.84 | 34.56 | 57.60 |
+| 1000 | 64.80 | 43.20 | 72.00 |
+
+### Target DLI Values
+
+| Stage | Minimum DLI | Optimal DLI | Notes |
+|---|---|---|---|
+| Seedlings | 6–10 | 12–18 | Soft light, long days |
+| Vegetation | 20–30 | 30–45 | 18/6 or 20/4 |
+| Flowering | 20–30 | 30–50 | 12/12, compensate with intensity |
+| Flowering with CO₂ | 30–40 | 40–65 | 12/12, high intensity |
+
+### Practical Significance of DLI
+
+DLI explains why a higher PPFD is needed during flowering (12/12) than during vegetation (18/6). With 18 hours of light and a PPFD of 400, the DLI is 25.9. To achieve the same DLI with 12 hours, you need a PPFD of 600.
+
+## How to Increase PPFD Without Replacing the Lamp
+
+If your current fixture does not deliver the target PPFD, there are several ways to improve the situation:
+
+- **Reduce the distance** from lamp to plants (watch for heat stress)
+- **Improve wall reflectivity** — Mylar, white matte paint, reflective insulation
+- **Reduce the box area** — concentrate light on a smaller area
+- **Add supplemental lighting** — side or inter-canopy light
+- **Upgrade the reflector** to a more efficient one (for HPS/MH)
+
+## Common Mistakes When Working with PPFD
+
+- **Relying on center PPFD** — manufacturers often quote peak center values. Average PPFD can be 30–50% lower.
+- **Ignoring non-uniformity** — plants in the box corners may receive 2–3 times less light than those in the center.
+- **Confusing PPF and PPFD** — PPF characterizes the lamp, PPFD characterizes a specific point. High PPF does not guarantee high PPFD if the light is dispersed.
+- **Chasing maximum PPFD without CO₂** — above 800 umol/s/m² without CO₂ enrichment is ineffective.
+- **Not verifying claimed specifications** — some manufacturers inflate PPF and PPFD in their specs. Trust independent test results.
+
+## Relationship Between Metrics: Summary
+
+To recap the connections between all metrics:
+
+- **PAR** (400–700 nm) — the range of light useful for plants
+- **PPF** (umol/s) — how many PAR photons the lamp emits in total (lamp characteristic)
+- **PPFD** (umol/s/m²) — how many PAR photons reach a specific area (point characteristic)
+- **DLI** (mol/m²/day) — how many PAR photons the plant received over the course of a day (PPFD x time)
+- **Efficacy** (umol/J) — how many PAR photons the lamp generates per joule of energy consumed (PPF / Watts)
+
+Understanding these metrics allows you to objectively compare different fixtures, properly configure distance and lighting schedules, and assess whether your plants are receiving enough light for maximum productivity.

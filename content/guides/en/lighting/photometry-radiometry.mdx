@@ -1,0 +1,227 @@
+---
+title: "Photometry and Radiometry. Conversion Formulas"
+description: "A deep dive into photometric and radiometric units. Formulas for converting lux to PPFD for different lamp types with practical examples."
+level: advanced
+order: 5
+readTime: 13
+date: "2025-02-01"
+---
+
+# Photometry and Radiometry. Conversion Formulas
+
+When working with plant lighting, growers encounter two systems of light measurement — photometric and radiometric. Understanding the difference between them and being able to convert one set of units to the other allows for more accurate evaluation of lamp efficiency and more informed decisions.
+
+## Two Systems of Light Measurement
+
+### Photometry
+
+Photometry measures light from the perspective of human perception. All photometric units are based on the spectral luminosity function of the eye, V(lambda), which peaks at 555 nm (green light).
+
+**Main photometric units:**
+
+| Quantity | Unit | Symbol | Definition |
+|---|---|---|---|
+| Luminous flux | lumen | lm | Total visible light from a source |
+| Luminous intensity | candela | cd | Luminous flux per unit solid angle |
+| Illuminance | lux | lx | Luminous flux per unit area (lm/m²) |
+| Luminous emittance | lm/m² | — | Luminous flux emitted by a surface |
+
+### Radiometry
+
+Radiometry measures electromagnetic radiation objectively, without accounting for eye sensitivity. For horticulture, this is the more relevant system.
+
+**Main radiometric units:**
+
+| Quantity | Unit | Symbol | Definition |
+|---|---|---|---|
+| Radiant flux | watt | W | Total radiant power |
+| Radiant intensity | W/sr | W/sr | Power per unit solid angle |
+| Irradiance | W/m² | W/m² | Power per unit area |
+| Radiant exposure | J/m² | J/m² | Energy per unit area over time |
+
+### Quantum (Photon) Units
+
+For plants, a third system — quantum units — is especially important, since photosynthesis depends on the number of absorbed photons rather than their total energy.
+
+| Quantity | Unit | Definition |
+|---|---|---|
+| PPF | umol/s | Number of photons (400–700 nm) per second |
+| PPFD | umol/s/m² | Photon flux density per area |
+| DLI | mol/m²/day | Total photons received per day |
+
+## Why Lumens Don't Work for Plants
+
+The human eye's V(lambda) function peaks at 555 nm (green). This means 1 W of green light is rated at 683 lumens — the maximum value. Meanwhile:
+
+- 1 W of red light (660 nm) = approximately 60 lumens
+- 1 W of blue light (450 nm) = approximately 35 lumens
+- 1 W of green light (555 nm) = 683 lumens
+
+The paradox: a lamp emitting a lot of green light will have high lumen ratings but will be less effective for plants than a lamp with red and blue spectrum at the same lumen count.
+
+This is precisely why purple (blurple) LEDs with red and blue diodes had low lumen ratings but still delivered good results for plants.
+
+## PAR Watts
+
+PAR watts refer to the radiant power within the PAR range (400–700 nm) only, measured in watts. This is a radiometric quantity that accounts for only the portion of the spectrum useful to plants.
+
+**PAR efficiency = PAR watts / Input power (W)**
+
+Typical PAR efficiency values:
+
+- HPS: 25–30% of input power converts to PAR watts
+- MH: 20–25%
+- LED: 40–55% (top models)
+- CFL: 15–20%
+
+**Example:** A 600 W HPS consumes approximately 660 W (with ballast) and emits roughly 180–200 PAR watts. A 300 W LED can emit 150–170 PAR watts. This explains why a lower-wattage LED can replace a more powerful HPS.
+
+## Formulas for Converting Lux to PPFD
+
+A direct conversion from lux to PPFD is impossible without knowing the spectral composition of the source, since these units are based on different weighting functions. However, for each specific lamp type, experimentally determined conversion factors exist.
+
+### General Formula
+
+**PPFD (umol/s/m²) = Illuminance (lx) x Conversion factor (K)**
+
+Or in reverse:
+
+**Illuminance (lx) = PPFD / K**
+
+### Conversion Factors for Different Lamp Types
+
+| Lamp Type | Factor K (umol/s/m² per lux) | Inverse (lux per umol/s/m²) |
+|---|---|---|
+| Sunlight | 0.0185 | 54.0 |
+| HPS | 0.0130 | 76.9 |
+| MH | 0.0159 | 62.9 |
+| CMH / LEC | 0.0171 | 58.5 |
+| White LED (full spectrum) | 0.0150–0.0175 | 57.1–66.7 |
+| Blurple LED (red+blue) | 0.0235–0.0290 | 34.5–42.6 |
+| CFL 6500 K | 0.0154 | 64.9 |
+| CFL 2700 K | 0.0139 | 71.9 |
+| Fluorescent T5 6500 K | 0.0155 | 64.5 |
+
+**Caution:** These factors are approximate and vary depending on the specific lamp model and its spectral characteristics. The margin of error can be 10–20%.
+
+### Why the Factors Differ
+
+The K factor depends on the lamp's spectral composition. The more the spectrum is shifted away from the green region (the peak of human eye sensitivity), the higher the factor. Blurple LEDs, which emit only red and blue light (no green), have the highest factor because few lumens correspond to many PAR photons.
+
+## Converting Watts to PPFD
+
+### Via Lamp Efficiency
+
+**PPFD = (Power x Efficiency) / Area x Uniformity coefficient**
+
+Where efficiency is expressed in umol/J.
+
+### Via PAR Watts
+
+To convert PAR watts to photon flux, the weighted average wavelength must be considered. Approximately:
+
+**1 PAR watt ≈ 4.57 umol/s** (at an average wavelength of 550 nm)
+
+More precise values:
+
+- For red light (660 nm): 1 W ≈ 5.52 umol/s
+- For blue light (450 nm): 1 W ≈ 3.77 umol/s
+- For green light (550 nm): 1 W ≈ 4.61 umol/s
+
+This is because photons of different wavelengths carry different amounts of energy. Red photons are less energetic, so more photons per watt are produced.
+
+### Photon Energy Formula
+
+**E = hc / lambda**
+
+Where:
+- **E** — photon energy (J)
+- **h** — Planck's constant (6.626 x 10⁻³⁴ J·s)
+- **c** — speed of light (3 x 10⁸ m/s)
+- **lambda** — wavelength (m)
+
+**Number of photons per second per 1 W:**
+
+**N = lambda / (hc) = lambda (nm) x 8.36 x 10⁻³ umol/s/W**
+
+## Practical Calculation Examples
+
+### Example 1: 400 W HPS via Lux Meter
+
+You have a lux meter showing 45,000 lx at canopy level under a 400 W HPS.
+
+**PPFD = 45,000 x 0.0130 = 585 umol/s/m²**
+
+This is a good value for the start of flowering.
+
+### Example 2: LED Quantum Board via Lux Meter
+
+The lux meter reads 35,000 lx under a full-spectrum white LED (3500 K).
+
+**PPFD = 35,000 x 0.0165 = 577 umol/s/m²**
+
+Note that at the same PPFD, the HPS shows higher lux (45,000) compared to the LED (35,000), because the HPS spectrum is closer to the peak sensitivity of the human eye.
+
+### Example 3: DLI Calculation
+
+If the average PPFD is 600 umol/s/m² on an 18/6 schedule:
+
+**DLI = PPFD x Hours x 3600 / 1,000,000**
+**DLI = 600 x 18 x 3600 / 1,000,000 = 38.9 mol/m²/day**
+
+On a 12/12 schedule:
+**DLI = 600 x 12 x 3600 / 1,000,000 = 25.9 mol/m²/day**
+
+Target DLI for most crops: 30–50 mol/m²/day during flowering.
+
+### Example 4: Evaluating an LED Fixture by Specifications
+
+Manufacturer states: power 240 W, PPF = 560 umol/s.
+
+**Efficiency = 560 / 240 = 2.33 umol/J**
+
+For an 80x80 cm box (0.64 m²):
+**Average PPFD ≈ 560 x 0.65 / 0.64 ≈ 569 umol/s/m²**
+
+(The 0.65 coefficient accounts for uniformity and losses)
+
+### Example 5: Converting W/m² to PPFD
+
+For an LED with 2.5 umol/J efficiency drawing 300 W over a 1 m² area:
+
+**Power per area = 300 W/m²**
+**PAR output ≈ 300 x 2.5 = 750 umol/s** (total PPF)
+**Average PPFD ≈ 750 x 0.6 = 450 umol/s/m²**
+
+## Summary Table: Converting 10,000 Lux to PPFD
+
+| Lamp Type | 10,000 lx = ... PPFD |
+|---|---|
+| Sunlight | 185 umol/s/m² |
+| HPS | 130 umol/s/m² |
+| MH | 159 umol/s/m² |
+| CMH | 171 umol/s/m² |
+| White LED | 150–175 umol/s/m² |
+| Blurple LED | 235–290 umol/s/m² |
+| CFL 6500 K | 154 umol/s/m² |
+
+## Reverse Table: Target PPFD to Lux
+
+| Target PPFD | HPS (lx) | White LED (lx) | CMH (lx) |
+|---|---|---|---|
+| 200 umol/s/m² | 15,380 | 12,500 | 11,700 |
+| 400 umol/s/m² | 30,770 | 25,000 | 23,400 |
+| 600 umol/s/m² | 46,150 | 37,500 | 35,100 |
+| 800 umol/s/m² | 61,540 | 50,000 | 46,800 |
+| 1000 umol/s/m² | 76,920 | 62,500 | 58,500 |
+
+## Accuracy and Limitations
+
+It is important to understand the limitations of calculation methods:
+
+- **Conversion factors** are approximate and depend on the specific lamp's spectrum. Variation between models of the same type can reach 15–20%.
+- **Lux meters** have their own margin of error, and budget models and smartphone apps can deviate by up to 30%.
+- **Lamp spectrum changes over time** — HPS shifts its spectrum toward end of life, LED diodes may degrade unevenly.
+- **Reflections from box walls** affect lux meter readings and can both inflate and deflate actual values.
+
+For precise PPFD measurements, a dedicated quantum sensor (PAR meter) such as the Apogee SQ-520 or equivalents is recommended. However, for most practical purposes, converting from lux using the provided factors offers sufficient accuracy.

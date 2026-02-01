@@ -1,0 +1,153 @@
+---
+title: "Capacitors for Gas Discharge Lamps"
+description: "Why you need a compensating capacitor for HPS and MH lamps, how to choose the right capacitance, selection table, wiring, capacitor types, and impact on energy savings"
+level: advanced
+order: 24
+readTime: 7
+date: "2025-02-01"
+---
+
+# Capacitors for Gas Discharge Lamps
+
+The compensating capacitor is one of the most underappreciated components in a gas discharge lamp wiring setup. Many growers assemble their lighting systems without a capacitor, not understanding the consequences. In this article, we will explain why a capacitor is needed, how to properly select and connect one, and what happens if you skip it.
+
+## Why You Need a Compensating Capacitor
+
+A gas discharge lamp with a magnetic choke represents an inductive load. This means the current in the circuit leads the voltage in phase, and part of the electrical energy is spent creating a magnetic field in the choke without doing useful work. This wasted energy is called reactive power.
+
+A capacitor connected in parallel at the input creates a capacitive load that offsets the inductive component of the choke. As a result, reactive power decreases and the total current in the supply line is reduced.
+
+## Power Factor (cos phi)
+
+The power factor (cos phi, or power factor) indicates what proportion of the consumed current is used for useful work.
+
+- **Without a capacitor**: the cos phi of a magnetic choke with a lamp is 0.45–0.55. This means nearly twice as much current is drawn from the mains as the lamp actually needs
+- **With a capacitor**: cos phi increases to 0.85–0.95, and current drops by nearly half
+
+Example for a 400 W HPS:
+
+| Parameter | Without Capacitor | With Capacitor |
+|---|---|---|
+| Active power | 460 W (lamp + choke) | 460 W |
+| cos phi | 0.5 | 0.92 |
+| Apparent power (VA) | 920 VA | 500 VA |
+| Line current | 4.2 A | 2.3 A |
+
+As you can see, the active power consumed (what you pay for on your electricity bill) does not change. However, the current in the wires drops by nearly half, which has practical significance.
+
+## Choosing the Right Capacitance
+
+The compensating capacitor value is selected based on the lamp wattage and choke characteristics. The table below shows recommended values.
+
+| Lamp Wattage | Capacitor Value | Capacitor Voltage Rating |
+|---|---|---|
+| 70 W | 6 µF | 250 V and above |
+| 100 W | 10 µF | 250 V and above |
+| 150 W | 18 µF | 250 V and above |
+| 250 W | 32 µF | 250 V and above |
+| 400 W | 45 µF | 250 V and above |
+| 600 W | 60 µF | 250 V and above |
+| 1000 W | 85 µF | 250 V and above |
+
+The values in the table are approximate. The exact capacitance depends on the specific choke and is usually specified in its documentation. A tolerance of plus or minus 10% is acceptable.
+
+Do not install a capacitor with significantly higher capacitance than required. Overcompensation (cos phi > 1, capacitive character) leads to increased current in the circuit, similar to undercompensation.
+
+## Capacitor Wiring
+
+The compensating capacitor is connected **in parallel with the power input** — that is, between the live and neutral wires at the choke input. It is not inserted into the lamp circuit and does not affect the ignition process.
+
+Wiring diagram:
+
+```
+Mains L ──┬──> Choke ──> Ignitor ──> Lamp
+           │
+       [Capacitor]
+           │
+Mains N ──┘
+```
+
+Wiring rules:
+
+- The capacitor connects to the terminals before the choke (at the input of the entire circuit)
+- Polarity does not matter if a non-polarized capacitor is used (and only non-polarized capacitors are used for AC)
+- Connections are made through terminal blocks or soldering
+- The capacitor can be placed inside the housing with the choke and ignitor
+
+## Capacitor Types
+
+Specialized capacitors designed for AC circuits are used for power factor correction.
+
+### Dry Film Capacitors
+
+- The most common type for this application
+- Designations: CBB65, CBB60, or equivalents
+- Self-healing (if a breakdown occurs, the metallized film evaporates at the breakdown point, and the capacitor continues to function)
+- Working voltage: 250–450 V AC
+- Lifespan: 30,000–50,000 hours
+- Operating temperature: -25°C to +85°C
+
+### Oil-Filled Capacitors
+
+- Used in industrial luminaires
+- Higher reliability and lifespan
+- Larger size and weight
+- Found in older fixtures
+
+### Electrolytic Capacitors
+
+Not suitable for this application. Electrolytic capacitors are polarized and designed for DC. Connecting an electrolytic capacitor to an AC circuit will cause it to fail, overheat, and potentially explode.
+
+## What Happens Without a Capacitor
+
+The absence of a compensating capacitor will not prevent the lamp from working — it will shine just the same. However, several negative consequences arise:
+
+### Increased Current in the Wiring
+
+Without a capacitor, the current drawn from the mains is nearly twice what is needed. For a single lamp, this may be insignificant, but when using multiple lamps, the wires and circuit breakers experience increased load.
+
+### Wire and Contact Heating
+
+Increased current leads to greater heating of wires, terminal blocks, plugs, and outlets. This is especially critical when using extension cords and power strips, which are already the weakest link in the circuit.
+
+### Circuit Breaker Tripping
+
+If multiple lamps without capacitors are connected to the same line, the total current may exceed the circuit breaker's rating, causing it to trip.
+
+### Electrical Interference
+
+An inductive load without compensation creates more pronounced electromagnetic interference that can affect other electronics in the room.
+
+### Accelerated Wiring Wear
+
+Sustained operation at elevated currents accelerates the aging of wire insulation and can lead to its deterioration after several years.
+
+## Energy Savings
+
+There is a common misconception that a capacitor saves energy. This requires clarification.
+
+### For Residential Consumers
+
+In most countries, residential electricity meters measure only active power (watts), not apparent power (volt-amperes). Therefore, a capacitor does not provide direct savings on electricity bills.
+
+### Actual Savings
+
+The savings from a capacitor are indirect:
+
+- **Reduced wiring losses**: at lower current, heat losses in wires (P = I²R) decrease by 3–4 times. For a single lamp, this is negligible, but for multiple lamps on a long run, it is noticeable
+- **Extended lifespan of breakers and wiring**: less current means less wear
+- **Ability to connect more lamps**: more lamps can be safely connected to a single line with capacitors than without
+- **For commercial consumers**: if electricity is billed by apparent power (kVA), a capacitor provides direct savings of up to 40–50%
+
+## Practical Recommendations
+
+- Always install a compensating capacitor when using a magnetic choke. A capacitor costs very little, and the benefits are clear
+- When using an electronic ballast, a capacitor is not needed — the electronic ballast has a built-in power factor corrector
+- Purchase capacitors with a working voltage of at least 250 V AC (or 450 V DC — the rating on the casing may be specified differently)
+- Do not use used capacitors or ones with a bulging casing
+- When replacing a capacitor, select the capacitance according to the table or the choke documentation
+- A capacitor can retain a charge after disconnection — discharge it through a resistor or wait several minutes before working on the circuit
+
+## Conclusion
+
+The compensating capacitor is an inexpensive but important component in a gas discharge lamp wiring setup with a magnetic choke. It does not directly affect lamp operation but significantly reduces current in the supply line, decreases wiring heating, and improves overall system safety. At a cost of just a few dollars, it should be a mandatory part of any magnetic ballast assembly.
