@@ -1,0 +1,359 @@
+---
+title: "Temperature and Humidity Control Through Ventilation"
+description: "How ventilation manages microclimate. VPD, thermo-hygrostats, automation, solving overheating and high humidity problems."
+level: "intermediate"
+order: 6
+readTime: 13
+date: "2025-02-02"
+---
+
+# Temperature and Humidity Control Through Ventilation
+
+![Climate controller in grow box](/images/guides/temperature-humidity.jpg)
+
+Ventilation is the main tool for managing temperature and humidity in a grow box. Proper setup creates optimal microclimate at each growth stage.
+
+## Target Climate Parameters
+
+### Temperature
+
+| Stage | Day (lights on) | Night (lights off) |
+|-------|----------------|-------------------|
+| Seedling/clones | 72-77°F | 64-72°F |
+| Vegetation | 72-82°F | 64-75°F |
+| Flowering | 68-79°F | 64-72°F |
+| Last 2 weeks | 64-75°F | 59-68°F |
+
+**Important**:
+- Day/night difference: 7-14°F (stimulates metabolism)
+- Above 86°F: heat stress, growth slowdown
+- Below 59°F: growth stops, mold risk
+
+### Humidity (RH)
+
+| Stage | Optimal Humidity |
+|-------|------------------|
+| Seedling/clones | 65-75% |
+| Vegetation | 50-70% |
+| Early flowering | 45-55% |
+| Late flowering | 40-50% |
+| Last 2 weeks | 35-45% |
+
+**Important**:
+- High humidity (>70%) → mold, rot
+- Low humidity (<30%) → drying out, stress
+
+## VPD — Main Microclimate Indicator
+
+### What is VPD
+
+**VPD (Vapour Pressure Deficit)** — vapor pressure deficit. Shows how effectively plant can transpire moisture.
+
+**Formula** (simplified):
+```
+VPD = (100 - RH) / 100 × SVP(temperature)
+```
+
+### Target VPD Values
+
+| Stage | VPD (kPa) |
+|-------|-----------|
+| Clones/seedlings | 0.4-0.8 |
+| Vegetation | 0.8-1.2 |
+| Flowering | 1.0-1.5 |
+
+**What it means**:
+- **Low VPD** (<0.4): plants transpire poorly, mold risk
+- **Optimal VPD** (0.8-1.5): active growth, good metabolism
+- **High VPD** (>1.5): drought stress, plants close stomata
+
+### How to Regulate VPD
+
+**If VPD too low** (too humid):
+- Increase exhaust (remove humid air)
+- Reduce watering
+- Add circulation fans
+
+**If VPD too high** (too dry):
+- Decrease exhaust (keep moisture inside)
+- Add humidifier
+- Increase evaporation area (more plants, water trays)
+
+## Ventilation's Role in Climate Control
+
+### How Ventilation Affects Temperature
+
+**Exhaust removes hot air**:
+- Lights heat air
+- Hot air rises
+- Exhaust removes it from box
+
+**Intake supplies fresh air**:
+- Intake temperature = room temperature
+- If room is 72°F, intake air will be 72°F
+
+**Rule**:
+```
+Box Temperature = Room Temperature + Heat from Lights
+```
+
+**Example**:
+- Room temperature: 72°F
+- 240W LED heats by +7-11°F
+- Without exhaust: 72 + 11 = **83°F** (normal)
+- Weak exhaust: 72 + 18 = **90°F** (overheating)
+
+### How Ventilation Affects Humidity
+
+**Plants transpire water**:
+- Through leaf stomata (transpiration)
+- In closed box humidity quickly rises
+
+**Exhaust removes humid air**:
+- Stronger exhaust = lower humidity
+- Dry air intake "dilutes" moisture
+
+**Rule**:
+```
+Box Humidity = Room Humidity + Plant Transpiration
+```
+
+**Example**:
+- Room humidity: 50%
+- 4 plants in veg transpire lots of water
+- Without exhaust: 50% → 75-85% per hour
+- With exhaust: stable 55-60%
+
+## Climate Automation
+
+### Thermo-Hygrostats
+
+**What is it**: device that turns fan on/off based on temperature and humidity
+
+**Types**:
+- **Simple** ($20-40): one sensor, one relay
+- **Advanced** ($60-120): two sensors (temp + humidity), LCD display
+- **Smart-controllers** ($150-300): Wi-Fi, app, charts, alerts
+
+### Setting Up Thermo-Hygrostat
+
+**Example setup for veg**:
+
+```
+Temperature:
+  - Turn fan on 100% if >81°F
+  - Turn on 60% if >77°F
+  - Turn off if <75°F
+
+Humidity:
+  - Turn on 80% if >65%
+  - Turn on 50% if >55%
+  - Turn off if <50%
+```
+
+**Hysteresis** (turn-off delay):
+- Set 2-4°F or 5-10% RH
+- Prevents frequent on/off (extends fan life)
+
+### Advanced Controllers
+
+**AC Infinity Controller 69 Pro**:
+- Controls fan, heater, humidifier, dehumidifier
+- Programmable scenarios by growth stages
+- Wi-Fi, app
+- Price: ~$150-200
+
+**Inkbird ITC-308 WiFi**:
+- Thermostat with two outlets (heat + cool)
+- ±0.2°F accuracy
+- Price: ~$50-70
+
+**Pulse Labs Pulse Pro**:
+- Climate sensor + VPD analysis
+- App integration
+- Setup recommendations
+- Price: ~$200
+
+## Solving Temperature Problems
+
+### Problem: Overheating (>86°F)
+
+**Causes**:
+- Weak exhaust
+- Powerful lights (HPS, poor LEDs)
+- Hot room
+- Poor intake
+
+**Solutions**:
+
+1. **Increase exhaust**:
+   - Set fan to 100%
+   - Use more powerful fan (+30% CFM)
+
+2. **Improve intake**:
+   - Fully open intake vents
+   - Add active intake fan
+   - Take air from coolest room
+
+3. **Cool room**:
+   - Use air conditioner in room with box
+   - Turn lights on at night (when cooler)
+
+4. **Change lighting**:
+   - Replace HPS with LED (less heat)
+   - Use dimmer to reduce power
+
+5. **Active cooling**:
+   - Portable air conditioner (supply cold air to box)
+   - Ducting cooling (ice water in tank, air passes through radiator)
+
+### Problem: Too Cold (<64°F)
+
+**Causes**:
+- Cold room
+- Too strong exhaust
+- Winter, no heating
+
+**Solutions**:
+
+1. **Reduce exhaust**:
+   - Set fan to 40-60%
+   - Use thermostat (fan only turns on when overheating)
+
+2. **Close intake partially**:
+   - Close some intake vents
+   - Use deflector to redirect cold air
+
+3. **Heat room**:
+   - Use heater in room (not in tent!)
+   - Turn lights on during day (when warmer)
+
+4. **Use HPS lights**:
+   - They generate more heat (can be advantage)
+
+5. **Insulate box**:
+   - Use thermal insulation materials outside
+
+## Solving Humidity Problems
+
+### Problem: High Humidity (>70%)
+
+**Causes**:
+- Weak exhaust
+- Many plants (heavy transpiration)
+- Humid room
+- Overwatering
+
+**Solutions**:
+
+1. **Increase exhaust**:
+   - Set to 80-100%
+   - Install thermo-hygrostat (automatic control)
+
+2. **Improve circulation**:
+   - Add 1-2 circulation fans
+   - Direct airflow between plants
+
+3. **Dehumidifier**:
+   - Place in room with box (not inside tent)
+   - Capacity: 10-20 liters/day for 160-215 sq ft room
+
+4. **Reduce watering**:
+   - Water less and less often
+   - Remove water trays
+
+5. **Thin plantings**:
+   - Fewer plants = less transpiration
+   - Increase distance between pots
+
+### Problem: Low Humidity (<40%)
+
+**Causes**:
+- Too strong exhaust
+- Dry room (winter, heating)
+- Small plants (little transpiration)
+
+**Solutions**:
+
+1. **Reduce exhaust**:
+   - Set to 40-60%
+   - Use hygrostat (turns on only at high humidity)
+
+2. **Humidifier**:
+   - Place in box or room
+   - Ultrasonic or evaporative
+   - Capacity: 1-3 liters/day
+
+3. **Water trays**:
+   - Place several shallow containers with water
+   - Evaporation raises humidity 5-10%
+
+4. **Increase leaf area**:
+   - More plants
+   - Don't trim leaves unnecessarily
+
+5. **Wet towels**:
+   - Hang damp towels inside box
+   - Temporary solution for emergencies
+
+## Ventilation Schedule by Stage
+
+### Seedling (0-2 weeks)
+
+**Goal**: 72-77°F, 65-75% RH, VPD 0.4-0.8
+
+**Ventilation setup**:
+- Exhaust: 30-50% power
+- Circulation: weak, not aimed at seedlings
+- Intake: partially closed (preserve humidity)
+
+### Vegetation (2-6 weeks)
+
+**Goal**: 72-82°F, 50-70% RH, VPD 0.8-1.2
+
+**Ventilation setup**:
+- Exhaust: 60-80% power
+- Circulation: medium, aimed between plants
+- Intake: open 70-80%
+
+### Early Flowering (1-4 weeks)
+
+**Goal**: 68-79°F, 45-55% RH, VPD 1.0-1.4
+
+**Ventilation setup**:
+- Exhaust: 70-90% power (remove moisture)
+- Circulation: strong (improve circulation between buds)
+- Intake: fully open
+- Filter: essential (odor intensifies)
+
+### Late Flowering (4-8 weeks)
+
+**Goal**: 68-75°F, 40-50% RH, VPD 1.2-1.5
+
+**Ventilation setup**:
+- Exhaust: 80-100% power (maximum dryness)
+- Circulation: strong (mold prevention)
+- Intake: maximum
+- Dehumidifier: if humidity >50%
+
+### Last 2 Weeks (flush)
+
+**Goal**: 64-75°F, 35-45% RH, VPD 1.4-1.6
+
+**Ventilation setup**:
+- Exhaust: 100% power
+- Circulation: maximum (mold prevention on dense buds)
+- Dehumidifier: recommended
+
+## Growie Integration
+
+**Growie** helps track climate and optimize settings:
+
+- **Monitoring**: temperature and humidity charts 24/7
+- **Alerts**: notifications when out of range
+- **VPD calculator**: automatic optimal VPD calculation
+- **Recommendations**: how to adjust ventilation
+
+## Growie Tip
+
+Don't chase perfect numbers — plants forgive small deviations (±4°F, ±10% RH). Main thing — stability and no sudden spikes. Use thermo-hygrostat for climate automation, this saves time and reduces plant stress. Track VPD in Growie app — it's better microclimate indicator than just temperature or humidity separately.
